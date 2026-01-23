@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/ - Uncommented for GitHub Pages deploy
 
 # production
 /build
