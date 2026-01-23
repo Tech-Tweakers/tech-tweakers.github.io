@@ -36,12 +36,10 @@ jobs:
         run: npm ci
 
       - name: Build with Next.js
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
+        run: |
+          npm run build
+          ls -la out/ || echo "Pasta out não encontrada"
+          ls -la out/ | head -10 || echo "Erro ao listar pasta out"
 
   deploy:
     environment:
