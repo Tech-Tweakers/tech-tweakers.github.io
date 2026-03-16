@@ -29,41 +29,41 @@ const trainingTiers = [
   {
     name: "LoRA Fine-Tuning",
     icon: Layers,
-    tagline: "Lightweight adaptation, production-ready fast",
+    tagline: "Adapt a model without retraining it from scratch",
     description:
-      "Efficient parameter-efficient fine-tuning using Low-Rank Adaptation. Ideal for adapting powerful open-source models to your domain without the cost and complexity of full retraining.",
+      "We take an existing open-source model and fine-tune it on your data using LoRA. It's faster, cheaper, and good enough for most production use cases.",
     highlights: [
-      "Adapts models like LLaMA, Mistral, Qwen, and Gemma",
-      "Trains on your proprietary data with minimal compute",
-      "Mergeable adapters for flexible deployment",
-      "Fast iteration — from dataset to deployed model in days",
+      "Works with LLaMA, Mistral, Qwen, Gemma, and others",
+      "Trains on your data with modest compute requirements",
+      "Mergeable adapters — swap them without redeploying",
+      "Dataset to deployed model in days, not weeks",
       "Quantization-ready outputs (GGUF, AWQ, GPTQ)",
     ],
     useCases: [
       "Domain-specific assistants (legal, medical, finance)",
-      "Custom code generation for internal frameworks",
-      "Tone and style alignment for brand voice",
+      "Code generation for internal frameworks",
+      "Tone and style alignment",
       "Classification and extraction pipelines",
     ],
   },
   {
     name: "Full Fine-Tuning",
     icon: Cpu,
-    tagline: "Maximum performance, zero compromise",
+    tagline: "When LoRA isn't enough",
     description:
-      "End-to-end training of all model parameters for when you need peak performance on specialized tasks. We handle the full pipeline — from data curation to evaluation to deployment.",
+      "Full parameter training for cases where you need the model to deeply learn your domain. More expensive, more time, but sometimes it's the right call.",
     highlights: [
-      "Full parameter training on multi-GPU / multi-node setups",
-      "Custom data pipelines with quality filtering and deduplication",
-      "Comprehensive evaluation suites and benchmark tracking",
+      "Multi-GPU / multi-node training setups",
+      "Data pipelines with filtering and deduplication",
+      "Evaluation suites and benchmark tracking",
       "Distributed training with DeepSpeed / FSDP",
-      "Model distillation and architecture optimization",
+      "Model distillation when you need a smaller version",
     ],
     useCases: [
-      "Building proprietary foundation models",
-      "High-stakes domains requiring maximum accuracy",
+      "Building your own foundation model",
+      "High-stakes domains where accuracy is non-negotiable",
       "Multi-task models with complex reasoning",
-      "On-premise deployments with strict data governance",
+      "On-premise deployments with strict data rules",
     ],
   },
 ];
@@ -74,31 +74,30 @@ export default function ServicesPage() {
       <Section className="py-20">
         <div className="max-w-3xl mx-auto space-y-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Our Technical Services
+            Services
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            We provide specialized engineering services, not generic web
-            development. Our focus is on solving hard technical problems for
-            startups and growing companies.
+            We do three things well: cloud infrastructure, model training, and
+            LLM automation. If your problem fits one of these, we can probably
+            help.
           </p>
         </div>
       </Section>
 
       {/* Cloud & Automation Section */}
-      <Section className="bg-muted/30 py-20">
+      <Section id="cloud" className="bg-muted/30 py-20">
         <div className="max-w-3xl mx-auto space-y-6 text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Cloud className="mr-2 h-4 w-4" />
             Cloud & Automation
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Infrastructure That Scales With You
+            Infrastructure That Works
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            We design, deploy, and maintain cloud-native infrastructure using
-            Infrastructure as Code. From CI/CD pipelines to production
-            observability — we automate the boring stuff so you can focus on
-            shipping.
+            We set up and maintain cloud infrastructure using IaC. CI/CD,
+            containers, observability, security — the stuff that keeps your
+            product running while your team ships features.
           </p>
         </div>
 
@@ -109,8 +108,8 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">Infrastructure as Code</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Terraform, Pulumi, and CloudFormation to provision and manage
-              infrastructure reproducibly across AWS, GCP, and Azure.
+              Terraform, Pulumi, CloudFormation. Reproducible infra across AWS,
+              GCP, and Azure. No more clicking around in consoles.
             </p>
           </div>
 
@@ -120,9 +119,8 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">CI/CD Pipelines</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Automated build, test, and deployment pipelines with GitHub
-              Actions, GitLab CI, and ArgoCD — from commit to production with
-              confidence.
+              GitHub Actions, GitLab CI, ArgoCD. Push code, tests run, it
+              deploys. If it breaks, you know before your users do.
             </p>
           </div>
 
@@ -132,9 +130,8 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">Containers & Orchestration</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Docker, Kubernetes, and ECS for containerized workloads —
-              including service mesh, auto-scaling, and multi-environment
-              deployments.
+              Docker, Kubernetes, ECS. Service mesh, auto-scaling,
+              multi-environment deploys. The boring but critical stuff.
             </p>
           </div>
 
@@ -144,9 +141,8 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">Observability</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Logging, metrics, and tracing with Grafana, Prometheus, and
-              OpenTelemetry — so you always know what&apos;s happening in
-              production.
+              Grafana, Prometheus, OpenTelemetry. Logs, metrics, traces — so
+              you actually know what&apos;s happening in prod.
             </p>
           </div>
 
@@ -156,8 +152,8 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">Security & Compliance</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Secrets management, IAM policies, network segmentation, and
-              compliance-ready configurations baked into every deployment.
+              Secrets management, IAM, network segmentation. Not an
+              afterthought — baked into every deployment from day one.
             </p>
           </div>
 
@@ -165,11 +161,10 @@ export default function ServicesPage() {
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Database className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-bold">Managed Data Services</h3>
+            <h3 className="text-xl font-bold">Data Services</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Database provisioning, backup strategies, replication, and
-              migration — PostgreSQL, Redis, DynamoDB, and more, fully
-              automated.
+              Database provisioning, backups, replication, migration.
+              PostgreSQL, Redis, DynamoDB — automated and monitored.
             </p>
           </div>
         </div>
@@ -179,26 +174,26 @@ export default function ServicesPage() {
             href="/contact"
             className="group inline-flex items-center text-primary font-medium hover:underline"
           >
-            Discuss your infrastructure needs{" "}
+            Talk about your infra{" "}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </Section>
 
       {/* Model Training Section */}
-      <Section className="py-20">
+      <Section id="training" className="py-20">
         <div className="max-w-3xl mx-auto space-y-6 text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <BrainCircuit className="mr-2 h-4 w-4" />
-            New — Model Training
+            Model Training
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Custom Model Training
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            We fine-tune and train open-source LLMs for your specific domain.
-            From lightweight LoRA adapters to full-parameter training — we
-            deliver models that actually work for your use case.
+            We fine-tune open-source LLMs on your data. Two approaches depending
+            on what you need — LoRA for most cases, full training when it
+            matters.
           </p>
         </div>
 
@@ -224,7 +219,7 @@ export default function ServicesPage() {
               <div className="p-8 space-y-6 flex-1">
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                    What&apos;s included
+                    What you get
                   </h4>
                   <ul className="space-y-2">
                     {tier.highlights.map((item) => (
@@ -238,7 +233,7 @@ export default function ServicesPage() {
 
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                    Use cases
+                    Works well for
                   </h4>
                   <ul className="space-y-2">
                     {tier.useCases.map((item) => (
@@ -261,27 +256,26 @@ export default function ServicesPage() {
             href="/contact"
             className="group inline-flex items-center text-primary font-medium hover:underline"
           >
-            Discuss your training project{" "}
+            Talk about training{" "}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </Section>
 
       {/* LLM Workflows Section */}
-      <Section className="bg-linear-to-br from-primary/5 via-background to-primary/5 py-20">
+      <Section id="workflows" className="bg-linear-to-br from-primary/5 via-background to-primary/5 py-20">
         <div className="max-w-3xl mx-auto space-y-6 text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Workflow className="mr-2 h-4 w-4" />
-            New — LLM Workflows
+            LLM Workflows
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Custom LLM Automation Flows
+            LLM Automation Flows
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            We design and build intelligent workflows powered by LLMs to
-            validate information, enforce procedures, and automate decisions
-            that today depend on manual review. Structured, auditable, and
-            production-grade.
+            We build workflows that use LLMs to automate things that today
+            require manual review — document checks, process enforcement, data
+            cleanup. Structured, logged, and with fallbacks.
           </p>
         </div>
 
@@ -290,11 +284,10 @@ export default function ServicesPage() {
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <FileCheck className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-bold">Information Validation</h3>
+            <h3 className="text-xl font-bold">Document Validation</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Automated pipelines that cross-reference documents, extract
-              structured data, and flag inconsistencies — replacing hours of
-              manual review with reliable, repeatable checks.
+              Cross-reference documents, extract data, flag inconsistencies.
+              Replaces hours of manual review with repeatable checks.
             </p>
           </div>
 
@@ -302,11 +295,10 @@ export default function ServicesPage() {
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <GitBranch className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-bold">Procedure Enforcement</h3>
+            <h3 className="text-xl font-bold">Process Enforcement</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Workflows that follow your business rules step-by-step — routing
-              decisions, enforcing checklists, and ensuring compliance with
-              internal processes before any action is taken.
+              Workflows that follow your business rules step by step — routing,
+              checklists, compliance gates. Nothing skips a step.
             </p>
           </div>
 
@@ -314,11 +306,10 @@ export default function ServicesPage() {
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <ShieldCheck className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-bold">Quality Assurance</h3>
+            <h3 className="text-xl font-bold">Quality Checks</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Multi-stage review flows where LLMs analyze outputs against
-              quality criteria, escalate edge cases, and produce audit trails
-              for every decision made in the pipeline.
+              Multi-stage review where LLMs check outputs against your criteria,
+              escalate edge cases, and log every decision.
             </p>
           </div>
 
@@ -328,9 +319,8 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">Agentic Pipelines</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Multi-step autonomous agents that reason, use tools, and
-              coordinate with external systems — orchestrated with guardrails
-              and human-in-the-loop checkpoints.
+              Multi-step agents that use tools and talk to external systems.
+              With guardrails and human-in-the-loop when it matters.
             </p>
           </div>
 
@@ -340,9 +330,8 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">Data Enrichment</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Ingestion flows that classify, normalize, and enrich raw data
-              using LLMs — turning unstructured inputs into clean, actionable
-              datasets integrated with your systems.
+              Classify, normalize, and enrich raw data with LLMs. Turn
+              unstructured inputs into clean datasets your systems can use.
             </p>
           </div>
 
@@ -352,38 +341,37 @@ export default function ServicesPage() {
             </div>
             <h3 className="text-xl font-bold">Custom Orchestration</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Tailor-made flow engines that connect multiple models, APIs, and
-              business logic into a single coherent pipeline — designed for
-              your exact operational needs.
+              When none of the above fits exactly, we build custom flow
+              engines connecting models, APIs, and your business logic.
             </p>
           </div>
         </div>
 
         <div className="rounded-xl border bg-card/50 p-8 max-w-3xl mx-auto">
-          <h3 className="text-lg font-semibold mb-4">How we build workflows</h3>
+          <h3 className="text-lg font-semibold mb-4">How we approach it</h3>
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="space-y-2">
               <div className="text-2xl font-bold text-primary">01</div>
-              <h4 className="font-medium">Map</h4>
+              <h4 className="font-medium">Understand</h4>
               <p className="text-sm text-muted-foreground">
-                We map your current process, identify bottlenecks, and define
-                where LLMs add real value.
+                We look at your current process, find what&apos;s slow or
+                error-prone, and figure out where an LLM actually helps.
               </p>
             </div>
             <div className="space-y-2">
               <div className="text-2xl font-bold text-primary">02</div>
               <h4 className="font-medium">Build</h4>
               <p className="text-sm text-muted-foreground">
-                We build the flow with deterministic checkpoints, fallback
-                logic, and observability baked in.
+                We wire up the flow with checkpoints, fallbacks, and logging.
+                Nothing runs without visibility.
               </p>
             </div>
             <div className="space-y-2">
               <div className="text-2xl font-bold text-primary">03</div>
-              <h4 className="font-medium">Iterate</h4>
+              <h4 className="font-medium">Validate</h4>
               <p className="text-sm text-muted-foreground">
-                We evaluate against your real data, tune prompts and models,
-                and ship with confidence.
+                We test against your real data, tune what needs tuning, and
+                deploy when it&apos;s actually ready.
               </p>
             </div>
           </div>
@@ -394,7 +382,7 @@ export default function ServicesPage() {
             href="/contact"
             className="group inline-flex items-center text-primary font-medium hover:underline"
           >
-            Let&apos;s design your workflow{" "}
+            Talk about your workflow{" "}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -402,4 +390,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
