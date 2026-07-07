@@ -71,7 +71,7 @@ const trainingTiers = [
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Section className="py-20">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background py-20">
         <div className="max-w-3xl mx-auto space-y-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Services
@@ -85,7 +85,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* Cloud & Automation Section */}
-      <Section id="cloud" className="bg-muted/30 py-20">
+      <Section id="cloud" className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-20">
         <div className="max-w-3xl mx-auto space-y-6 text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Cloud className="mr-2 h-4 w-4" />
@@ -181,7 +181,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* Model Training Section */}
-      <Section id="training" className="py-20">
+      <Section id="training" className="bg-linear-to-br from-primary/5 via-background to-background py-20">
         <div className="max-w-3xl mx-auto space-y-6 text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <BrainCircuit className="mr-2 h-4 w-4" />
@@ -263,7 +263,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* LLM Workflows Section */}
-      <Section id="workflows" className="bg-linear-to-br from-primary/5 via-background to-primary/5 py-20">
+      <Section id="workflows" className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-20">
         <div className="max-w-3xl mx-auto space-y-6 text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Workflow className="mr-2 h-4 w-4" />

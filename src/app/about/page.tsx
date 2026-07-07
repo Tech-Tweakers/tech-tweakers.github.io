@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Section className="py-20">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background py-20">
         <div className="max-w-3xl mx-auto space-y-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">About</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -22,7 +22,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section className="bg-muted/30">
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 ">
         <div className="max-w-3xl mx-auto space-y-12">
           <div>
             <h2 className="text-2xl font-bold mb-4">What We Care About</h2>
@@ -57,7 +57,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background">
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="text-2xl font-bold">Who We Are</h2>
           <p className="text-muted-foreground leading-relaxed">

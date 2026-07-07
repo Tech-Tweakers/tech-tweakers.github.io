@@ -12,13 +12,14 @@ import {
   Layers,
   Bot,
   ExternalLink,
+  Coins,
 } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">
       {/* Hero */}
-      <Section className="flex flex-col justify-center min-h-[80vh] py-20 md:py-32">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background flex flex-col justify-center min-h-[80vh] py-20 md:py-32">
         <div className="max-w-3xl space-y-8 mx-auto">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             We build tools for our{" "}
@@ -49,8 +50,59 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Featured product — Hen Trader */}
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-12 md:py-16">
+        <div className="text-center space-y-3 max-w-2xl mx-auto mb-10">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+            <Coins className="h-3.5 w-3.5" />
+            Our first SaaS
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            From our tools to a product you can run.
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            The first thing we&apos;re shipping as a SaaS — built end to end on the
+            same protocol and stack we use ourselves.
+          </p>
+        </div>
+        <Link
+          href="/hen"
+          className="group block rounded-2xl border bg-card overflow-hidden shadow-sm transition-colors hover:border-primary/40"
+        >
+          <div className="grid md:grid-cols-[1.5fr_1fr] items-stretch">
+            <div className="p-8 md:p-10 flex flex-col justify-center space-y-4">
+              <div className="inline-flex items-center gap-2 self-start rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+                <Coins className="h-3.5 w-3.5" />
+                XCT on-chain · self-custody · in fine-tuning
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+                Hen Trader — a SOL accumulator that never lies about the books.
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                An autonomous market-maker on Solana, built on XCT and running
+                self-custody. Determinism executes the trades, the model
+                supervises — and every run reconciles against the blockchain,
+                cent for cent. Our take on AI in production, applied to real money.
+              </p>
+              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary pt-1">
+                See how it works
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </div>
+            <div className="relative bg-muted/30 border-t md:border-t-0 md:border-l flex items-center justify-center p-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/hen-dashboard.png"
+                alt="Hen Trader dashboard preview"
+                className="w-full max-w-[220px] rounded-lg border shadow-lg"
+              />
+            </div>
+          </div>
+        </Link>
+      </Section>
+
       {/* What We Do — 3 Pillars */}
-      <Section className="bg-muted/40">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background">
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             What We Do
@@ -115,7 +167,7 @@ export default function Home() {
       </Section>
 
       {/* XCT Protocol */}
-      <Section className="bg-linear-to-br from-primary/5 via-background to-primary/5">
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Shield className="mr-2 h-4 w-4" />
@@ -174,7 +226,7 @@ export default function Home() {
       </Section>
 
       {/* Polaris Ecosystem */}
-      <Section className="bg-muted/40">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background">
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             The Polaris Ecosystem
@@ -271,7 +323,7 @@ export default function Home() {
       </Section>
 
       {/* CTA */}
-      <Section className="border-t bg-muted/20">
+      <Section className="border-t bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
         <div className="flex flex-col items-center text-center space-y-6 max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Got a problem that fits?

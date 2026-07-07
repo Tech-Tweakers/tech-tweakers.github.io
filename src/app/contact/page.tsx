@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Section className="py-20">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background py-20">
         <div className="max-w-3xl mx-auto space-y-8 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Let's Build Together</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -19,7 +19,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section className="bg-muted/30">
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 ">
         <div className="max-w-xl mx-auto rounded-xl border bg-card p-8 shadow-sm">
            <form action="https://formsubmit.co/andreh.torres@hotmail.com" method="POST" className="space-y-6">
              <input type="hidden" name="_subject" value="Nova mensagem do site Tech Tweakers" />
