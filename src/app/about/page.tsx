@@ -1,6 +1,6 @@
 import { Section } from "@/components/layout/Section";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -60,18 +60,55 @@ export default function AboutPage() {
       <Section className="bg-linear-to-br from-primary/5 via-background to-background">
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="text-2xl font-bold">Who We Are</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            A small team with experience in backend systems, cloud
-            infrastructure, and applied AI. We stay lean because it lets us
-            focus on the work instead of managing overhead. Every project gets
-            direct attention from the people actually building it.
-          </p>
+          <div className="space-y-5 text-muted-foreground leading-relaxed">
+            <p>
+              Tech Tweakers didn&apos;t start as a company. It started as a place
+              to learn — and to make room for people to build together. No
+              pressure, no pitch. Just curious engineers figuring things out in the
+              open, one problem at a time.
+            </p>
+            <p>
+              Over the years, the systems kept proving themselves. The tools built
+              to solve our own problems turned into things we trusted in production
+              — and, along the way, into real results across the projects we
+              worked on. At some point the evidence was hard to ignore: what we
+              were doing worked, and it worked reliably.
+            </p>
+            <p>
+              The corporate step came from there — not to change what this is, but
+              to give it a foundation. The same hands-on engineering, now with the
+              structure to bring more people in and build for the long run. Lean on
+              purpose: every project gets direct attention from the people actually
+              building it.
+            </p>
+          </div>
+
+          <div className="rounded-xl border bg-linear-to-br from-card via-card to-muted/40 p-6">
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <div>
+                <div className="font-semibold text-foreground">Andreh Torres</div>
+                <div className="text-sm text-muted-foreground">
+                  Principal Engineer / Founder · Tech Tweakers Brazil
+                </div>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/andrehtorres/?locale=en-US"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+              >
+                <Linkedin className="h-4 w-4" />
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
           <div className="pt-4">
             <Link
               href="/contact"
               className="group inline-flex items-center text-primary font-medium hover:underline"
             >
-              Want to work with us?{" "}
+              Want to build with us?{" "}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
