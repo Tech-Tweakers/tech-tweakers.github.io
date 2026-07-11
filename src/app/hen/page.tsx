@@ -97,7 +97,7 @@ export default function HenPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
-      <Section className="py-20">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background py-20">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Coins className="mr-2 h-4 w-4" />
@@ -131,7 +131,7 @@ export default function HenPage() {
       </Section>
 
       {/* The arc v1 -> v2 */}
-      <Section className="bg-muted/30">
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 ">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="space-y-3">
             <div className="text-sm font-semibold uppercase tracking-wider text-primary">
@@ -183,7 +183,7 @@ export default function HenPage() {
       </Section>
 
       {/* How it works */}
-      <Section id="how">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background" id="how">
         <div className="max-w-5xl mx-auto space-y-10">
           <div className="space-y-4">
             <div className="text-sm font-semibold uppercase tracking-wider text-primary">
@@ -227,7 +227,7 @@ export default function HenPage() {
       </Section>
 
       {/* The vault — sweepers */}
-      <Section className="bg-muted/30">
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 ">
         <div className="max-w-5xl mx-auto space-y-10">
           <div className="space-y-4">
             <div className="text-sm font-semibold uppercase tracking-wider text-primary">
@@ -299,7 +299,7 @@ export default function HenPage() {
       </Section>
 
       {/* The proof — books that close */}
-      <Section className="bg-muted/30">
+      <Section className="bg-linear-to-br from-primary/5 via-background to-background ">
         <div className="max-w-5xl mx-auto space-y-10">
           <div className="space-y-4">
             <div className="text-sm font-semibold uppercase tracking-wider text-primary">
@@ -380,7 +380,7 @@ export default function HenPage() {
       </Section>
 
       {/* Limited beta / waitlist */}
-      <Section>
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <div className="text-sm font-semibold uppercase tracking-wider text-primary">
             Limited beta
