@@ -13,35 +13,35 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hen Trader | Tech Tweakers",
+  title: "Harvest — Golden Hen Suite | Tech Tweakers",
   description:
-    "An autonomous SOL accumulator on Solana, built on XCT. Determinism executes, the model supervises — and the books reconcile against the blockchain, cent for cent.",
+    "Harvest volatility. An autonomous SOL accumulator on Solana, built on XCT — determinism executes, the model supervises, and the books reconcile against the blockchain, cent for cent.",
 };
 
 const mechanics = [
   {
-    step: "01 · sell",
+    step: "01 · seed",
     icon: TrendingDown,
-    title: "Sells into the dip",
-    body: "SOL drops, the hen sells high — waiting to buy it back cheaper. The engine of the whole cycle.",
+    title: "Seeds into the dip",
+    body: "SOL climbs, the hen seeds it into the market — waiting to harvest it back cheaper. The engine of the whole cycle.",
   },
   {
     step: "02 · incubate",
     icon: Egg,
     title: "Incubates what didn't fill",
-    body: "A sell that times out doesn't die — it goes to the incubator, watching for the price to return to its target. Zero cost, capital free.",
+    body: "A seed that times out doesn't die — it goes to the incubator, watching for the price to return to its mark. Zero cost, capital free.",
   },
   {
     step: "03 · hatch",
     icon: Bird,
     title: "Hatches when it returns",
-    body: "Price hits the original target — the egg hatches, the swap reverses, SOL recovered. A late win, not a loss.",
+    body: "Price hits the original mark — the egg hatches, the position reverses, SOL recovered. A late harvest, not a loss.",
   },
   {
-    step: "04 · hold",
+    step: "04 · harvest",
     icon: Coins,
-    title: "Buys the turn, holds the SOL",
-    body: "On the way up, idle USDC converts to SOL — and stays SOL. No flip back. The stack grows.",
+    title: "Harvests the turn, keeps the SOL",
+    body: "On the way up, idle USDC is harvested into SOL — and stays SOL. No flip back. The stack grows.",
   },
 ];
 
@@ -101,15 +101,15 @@ export default function HenPage() {
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Coins className="mr-2 h-4 w-4" />
-            XCT Protocol · applied to real money
+            Golden Hen Suite · Harvest Engine
           </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-balance">
-            The Hen Trader — a SOL accumulator that never lies about the books.
+            Harvest — a SOL accumulator that never lies about the books.
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
-            An autonomous market-maker that trades SOL/USDC on Solana to{" "}
-            <em>accumulate SOL</em> from volatility — not to chase floating
-            dollars. Built on XCT, running self-custody, and honest enough to
+            The market chops. The hen harvests. An autonomous SOL accumulator on
+            Solana that turns volatility into <em>more SOL</em> — not a bet on
+            direction. Built on XCT, running self-custody, and honest enough to
             reconcile its ledger against the blockchain, cent for cent.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row pt-4">
@@ -130,20 +130,19 @@ export default function HenPage() {
         </div>
       </Section>
 
-      {/* The arc v1 -> v2 + proof of life */}
+      {/* The arc v1 -> v2 */}
       <Section className="bg-muted/30">
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-center">
-          <div className="space-y-8">
-            <div className="space-y-3">
-              <div className="text-sm font-semibold uppercase tracking-wider text-primary">
-                Product evolution
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                The hen learned to fly on its own.
-              </h2>
+        <div className="max-w-3xl mx-auto space-y-8">
+          <div className="space-y-3">
+            <div className="text-sm font-semibold uppercase tracking-wider text-primary">
+              Product evolution
             </div>
+            <h2 className="text-3xl font-bold tracking-tight">
+              The hen learned to fly on its own.
+            </h2>
+          </div>
 
-            <div className="space-y-6">
+          <div className="space-y-6">
               <div className="relative border-l-2 border-border pl-8">
                 <span className="absolute -left-[7px] top-1 h-3 w-3 rounded-full border-2 border-muted-foreground bg-background" />
                 <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
@@ -179,34 +178,6 @@ export default function HenPage() {
                   </strong>
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* proof of life */}
-          <div className="rounded-xl border bg-card shadow-lg overflow-hidden w-full max-w-xs mx-auto lg:mx-0">
-            <div className="flex items-center gap-2 px-4 py-2.5 border-b bg-muted">
-              <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-              <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-              <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
-              <span className="ml-auto text-[11px] font-mono font-medium text-muted-foreground">
-                hen-monigo · dashboard
-              </span>
-            </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <a href="#dash-full" aria-label="Expand dashboard">
-              <img
-                src="/hen-dashboard.png"
-                alt="Hen Trader dashboard — trades feed with wins, hatched eggs, incubating sells and regime badges"
-                className="block w-full h-auto cursor-zoom-in"
-              />
-            </a>
-            <div className="px-4 py-3 border-t text-center text-xs font-mono text-muted-foreground">
-              from the latest{" "}
-              <span className="text-foreground font-semibold">
-                fine-tuning run
-              </span>{" "}
-              · <span className="opacity-70">click to expand</span>
-            </div>
           </div>
         </div>
       </Section>
@@ -223,10 +194,10 @@ export default function HenPage() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl">
               The hen isn&apos;t a bot that bets on direction — it&apos;s a pump
-              that accumulates SOL from the market&apos;s chop. It sells into dips
-              and buys back cheaper; converts idle USDC into SOL on the way up and{" "}
-              <em>holds</em>. Each trade only has to happen without a loss — the
-              result comes from the accumulation.
+              that accumulates SOL from the market&apos;s chop. It seeds into the
+              highs and harvests back cheaper; harvests idle USDC into SOL on the
+              way up and <em>keeps</em> it. Each move only has to happen without a
+              loss — the result comes from the accumulation.
             </p>
           </div>
 
@@ -306,16 +277,16 @@ export default function HenPage() {
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
-                <h4 className="font-semibold">Hen Holder</h4>
+                <h4 className="font-semibold">Treasury</h4>
                 <span className="text-[10px] font-mono uppercase tracking-wider rounded bg-muted px-2 py-0.5 text-muted-foreground">
                   coming soon
                 </span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                The vault isn&apos;t the end of the line. A sibling appliance takes
-                over the savings wallet and manages the hold itself — harvesting
-                volatility from the crystallized stack, so even the saved SOL keeps
-                working. Two hens, one cycle: one trades, one guards and grows.
+                The vault isn&apos;t the end of the line. A sibling engine takes
+                over the savings and manages it like a treasurer — preserving the
+                crystallized stack and putting even the saved SOL to work. Two
+                engines, one suite: Harvest grows it, Treasury guards it.
               </p>
             </div>
           </div>
@@ -415,13 +386,12 @@ export default function HenPage() {
             Limited beta
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-balance">
-            Run your own hen.
+            Run your own Harvest.
           </h2>
           <p className="text-lg text-muted-foreground">
-            A sealed, self-custody appliance — your box, your wallet, your keys.
-            We never touch your money. Onboarding is manual and done directly with
-            the team, one box at a time, so each deployment stays isolated and
-            secure.
+            A sealed, self-custody engine — your box, your wallet, your keys. We
+            never touch your money. Onboarding is manual and done directly with the
+            team, one box at a time, so each deployment stays isolated and secure.
           </p>
           <div className="flex justify-center pt-2">
             <span className="inline-flex items-center justify-center rounded-md border border-primary/30 bg-primary/5 px-8 py-3 text-sm font-medium text-primary">
@@ -435,33 +405,6 @@ export default function HenPage() {
           </div>
         </div>
       </Section>
-
-      {/* Lightbox — pure CSS :target, no JS. Click image → expands; click backdrop → closes. */}
-      <div id="dash-full" className="lightbox">
-        <a href="#" className="lightbox-backdrop" aria-label="Close">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/hen-dashboard.png" alt="Hen Trader dashboard — full view" />
-        </a>
-      </div>
-      <style>{`
-        .lightbox {
-          position: fixed; inset: 0; z-index: 50;
-          display: none; align-items: center; justify-content: center;
-          background: rgba(0,0,0,0.85); padding: 24px;
-          opacity: 0; transition: opacity 0.2s ease;
-        }
-        .lightbox:target { display: flex; opacity: 1; }
-        .lightbox-backdrop {
-          display: flex; align-items: center; justify-content: center;
-          width: 100%; height: 100%; cursor: zoom-out;
-        }
-        .lightbox img {
-          max-width: min(480px, 92vw); max-height: 92vh;
-          width: auto; height: auto; object-fit: contain;
-          border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-          cursor: default;
-        }
-      `}</style>
     </div>
   );
 }

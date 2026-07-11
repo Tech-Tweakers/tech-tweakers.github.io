@@ -13,6 +13,9 @@ import {
   Bot,
   ExternalLink,
   Coins,
+  Sprout,
+  Vault,
+  Anchor,
 } from "lucide-react";
 
 export default function Home() {
@@ -28,10 +31,10 @@ export default function Home() {
             <span className="text-amber-400">production</span>.
           </h1>
           <p className="max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            That&apos;s why we created <strong>XCT</strong> — an open
-            protocol where models propose and deterministic tools execute
-            — because we got tired of LLMs breaking things in production.
-            Everything we ship, we use ourselves first.
+            From <strong>Polaris</strong> to <strong>XCT</strong> to{" "}
+            <strong>Hen</strong> to <strong>TxAI</strong> — we don&apos;t ship
+            demos. Everything we build, we run in our own production first. If it
+            can&apos;t survive our stack, it doesn&apos;t reach yours.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
@@ -50,7 +53,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Featured product — Hen Trader */}
+      {/* Featured product — Golden Hen Suite */}
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-12 md:py-16">
         <div className="text-center space-y-3 max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
@@ -58,47 +61,72 @@ export default function Home() {
             Our first SaaS
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            From our tools to a product you can run.
+            The Golden Hen Suite.
           </h2>
           <p className="text-lg text-muted-foreground">
-            The first thing we&apos;re shipping as a SaaS — built end to end on the
-            same protocol and stack we use ourselves.
+            Three self-custody engines for one job: managing wealth on-chain.
+            Built on XCT, run in our own production first — and honest enough to
+            reconcile every run against the blockchain, cent for cent.
           </p>
         </div>
-        <Link
-          href="/hen"
-          className="group block rounded-2xl border bg-card overflow-hidden shadow-sm transition-colors hover:border-primary/40"
-        >
-          <div className="grid md:grid-cols-[1.5fr_1fr] items-stretch">
-            <div className="p-8 md:p-10 flex flex-col justify-center space-y-4">
-              <div className="inline-flex items-center gap-2 self-start rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-                <Coins className="h-3.5 w-3.5" />
-                XCT on-chain · self-custody · in fine-tuning
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-                Hen Trader — a SOL accumulator that never lies about the books.
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                An autonomous market-maker on Solana, built on XCT and running
-                self-custody. Determinism executes the trades, the model
-                supervises — and every run reconciles against the blockchain,
-                cent for cent. Our take on AI in production, applied to real money.
-              </p>
-              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary pt-1">
-                See how it works
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+        <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto">
+          <Link
+            href="/hen"
+            className="group rounded-2xl border bg-card p-7 space-y-3 transition-colors hover:border-primary/40"
+          >
+            <div className="flex items-center gap-2">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Sprout className="h-5 w-5" />
+              </span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-primary">
+                live · in fine-tuning
               </span>
             </div>
-            <div className="relative bg-muted/30 border-t md:border-t-0 md:border-l flex items-center justify-center p-8">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/hen-dashboard.png"
-                alt="Hen Trader dashboard preview"
-                className="w-full max-w-[220px] rounded-lg border shadow-lg"
-              />
+            <h3 className="text-lg font-bold">Harvest</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Harvests volatility into SOL. A market-neutral accumulator that
+              turns the market&apos;s chop into a growing stack — no bet on
+              direction.
+            </p>
+            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary pt-1">
+              See how it works
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </Link>
+
+          <div className="rounded-2xl border border-dashed bg-card/50 p-7 space-y-3">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Vault className="h-5 w-5" />
+              </span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                coming soon
+              </span>
             </div>
+            <h3 className="text-lg font-bold">Treasury</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Preserves wealth. Sweeps the surplus off the table and manages the
+              crystallized stack like a treasurer — protecting on the way down,
+              keeping the gain.
+            </p>
           </div>
-        </Link>
+
+          <div className="rounded-2xl border border-dashed bg-card/50 p-7 space-y-3">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Anchor className="h-5 w-5" />
+              </span>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                coming soon
+              </span>
+            </div>
+            <h3 className="text-lg font-bold">Pirate</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Hunts asymmetric opportunity. Risk assumed, stated plainly — the
+              engine for the ones who want the high seas, not the harbor.
+            </p>
+          </div>
+        </div>
       </Section>
 
       {/* What We Do — 3 Pillars */}

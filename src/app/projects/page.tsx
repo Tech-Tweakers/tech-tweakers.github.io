@@ -53,15 +53,15 @@ export default function ProjectsPage() {
                   <Coins className="mr-2 h-4 w-4" />
                   XCT Applied · On-Chain
                 </div>
-                <h2 className="text-3xl font-bold">Hen Trader</h2>
+                <h2 className="text-3xl font-bold">Golden Hen Suite</h2>
                 <p className="text-muted-foreground max-w-2xl leading-relaxed">
-                  XCT taken to its extreme — where the model steps out of the hot
-                  path entirely. An autonomous SOL accumulator on Solana:
-                  deterministic price and regime propose, a deterministic pipeline
-                  validates, and deterministic tools execute the swap on-chain. The
-                  model was promoted to supervisor — it watches and alerts, it
-                  doesn&apos;t trade. Dramatically cheaper, safer, and the books
-                  reconcile against the blockchain, cent for cent.
+                  XCT taken to its extreme — three self-custody engines for managing
+                  wealth on-chain, where the model steps out of the hot path
+                  entirely. <strong>Harvest</strong> accumulates SOL from volatility;{" "}
+                  <strong>Treasury</strong> preserves it; <strong>Pirate</strong>{" "}
+                  hunts asymmetric bets. Deterministic pipelines execute, the model
+                  supervises, and the books reconcile against the blockchain, cent
+                  for cent.
                 </p>
               </div>
               <div className="flex gap-3 shrink-0">
