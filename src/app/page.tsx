@@ -56,14 +56,14 @@ export default function Home() {
         <div className="text-center space-y-3 max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
             <Coins className="h-3.5 w-3.5" />
-            Our first SaaS
+            Built in our own production
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             The Golden Hen Suite.
           </h2>
           <p className="text-lg text-muted-foreground">
             Three self-custody engines for one job: managing wealth on-chain.
-            Built on XCT, run in our own production first — and honest enough to
+            Built on XCT, run in our own production first — honest enough to
             reconcile every run against the blockchain, cent for cent.
           </p>
         </div>
@@ -77,14 +77,14 @@ export default function Home() {
                 <Sprout className="h-5 w-5" />
               </span>
               <span className="text-[10px] font-mono uppercase tracking-wider text-primary">
-                live · in fine-tuning
+                live · on-chain
               </span>
             </div>
-            <h3 className="text-lg font-bold">Harvest</h3>
+            <h3 className="text-lg font-bold">Miner</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Harvests volatility into SOL. A market-neutral accumulator that
-              turns the market&apos;s chop into a growing stack — no bet on
-              direction.
+              Mines SOL from volatility. A market-neutral engine that sells into
+              strength, rebuys into weakness — and knows when to stop instead of
+              bleeding into a trend.
             </p>
             <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary pt-1">
               See how it works

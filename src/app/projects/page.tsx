@@ -57,11 +57,11 @@ export default function ProjectsPage() {
                 <p className="text-muted-foreground max-w-2xl leading-relaxed">
                   XCT taken to its extreme — three self-custody engines for managing
                   wealth on-chain, where the model steps out of the hot path
-                  entirely. <strong>Harvest</strong> accumulates SOL from volatility;{" "}
-                  <strong>Treasury</strong> preserves it; <strong>Pirate</strong>{" "}
-                  hunts asymmetric bets. Deterministic pipelines execute, the model
-                  supervises, and the books reconcile against the blockchain, cent
-                  for cent.
+                  entirely. <strong>Miner</strong> mines SOL from volatility and
+                  knows when to stop; <strong>Treasury</strong> preserves it;{" "}
+                  <strong>Pirate</strong> hunts asymmetric bets. Deterministic
+                  pipelines execute, the model supervises, and the books reconcile
+                  against the blockchain, cent for cent.
                 </p>
               </div>
               <div className="flex gap-3 shrink-0">
