@@ -106,14 +106,22 @@ export default function HenPage() {
             Golden Hen Suite · Mining Engine
           </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-balance">
-            Miner — it mines SOL from volatility, and knows when to stop.
+            The market dropped 14%.
+            <br />
+            <span className="text-primary">Our SOL grew 10%.</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
-            Not a bot that bets on direction. A non-custodial engine on Solana
-            that sells into strength, rebuys into weakness, and crystallizes
-            each spread on-chain. The difference from every grid bot:{" "}
-            <em>when it&apos;s mining against the grain, it waits</em> — instead
-            of bleeding into the trend.
+            Same 17 days. The price of SOL fell 14% — and the wallet ended with{" "}
+            <strong className="text-foreground">10% more SOL</strong> than it
+            started. Not a prediction. Not a backtest. A real engine, running
+            live on Solana, mining volatility instead of betting on direction.
+          </p>
+          <p className="text-base text-muted-foreground max-w-3xl">
+            You&apos;re holding SOL anyway. It&apos;s sitting there doing
+            nothing. <strong className="text-foreground">Miner</strong> turns
+            the market&apos;s chop into more of the coin you already hold — and,
+            unlike every grid bot, it knows when to stop and wait instead of
+            bleeding into a trend.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row pt-4">
             <Link
@@ -316,8 +324,51 @@ export default function HenPage() {
               Anyone can claim a number. Miner proves it on-chain: every move is
               a real swap, every sweep a real transaction, the whole ledger
               reconcilable against the blockchain down to a gas-and-dust gap of
-              cents. It has run live, with real capital, through bull, bear, and
+              cents. It runs live, with real capital, through bull, bear, and
               lateral — not a demo that never faced the market.
+            </p>
+          </div>
+
+          {/* Real run stat block */}
+          <div className="rounded-xl border bg-card p-6 sm:p-8">
+            <div className="flex items-center justify-between mb-6">
+              <span className="text-sm font-semibold">One real run</span>
+              <span className="font-mono text-xs text-muted-foreground">
+                Sep 25 – Oct 12, 2026 · 17 days
+              </span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+              <div>
+                <div className="text-3xl font-bold text-primary">+10.5%</div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  more SOL, measured in SOL
+                </div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-red-500">−14%</div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  SOL price over the same days
+                </div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold">~50%</div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  of the time sitting idle, on purpose
+                </div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold">0</div>
+                <div className="text-xs text-muted-foreground mt-1">
+                  capital bled into the trend
+                </div>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed mt-6 border-t pt-5">
+              The ruler is SOL, not the dollar. When the price fell, the engine
+              kept turning the drop into more coins — and when it sensed it was
+              selling against the tide, it stopped and waited. The idle half
+              isn&apos;t downtime; it&apos;s the discipline that preserved the
+              capital to harvest the next move.
             </p>
           </div>
 
@@ -395,15 +446,16 @@ export default function HenPage() {
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <div className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Built it. Ran it. Want to see?
+            Built it. Ran it. Still running.
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-balance">
-            We made something a little absurd.
+            More of the coin you already hold — while the market falls.
           </h2>
           <p className="text-lg text-muted-foreground">
-            A sealed, self-custody engine — the key lives only in the runtime,
-            we never touch your money, and the whole ledger is on-chain. If that
-            sounds interesting, say hi.
+            It sounds a little absurd. That&apos;s why it&apos;s on-chain and
+            not in a slide. A sealed, self-custody engine — the key lives only
+            in the runtime, we never touch your money, and every move is a
+            transaction anyone can verify. If that intrigues you, say hi.
           </p>
           <div className="flex justify-center pt-2">
             <Link
