@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Miner — Golden Hen Suite | Tech Tweakers",
   description:
-    "Mine SOL from volatility. A non-custodial, market-neutral engine on Solana that sells into strength, rebuys into weakness, and knows when to stop. Validated on-chain across a full market cycle — zero capital bleed.",
+    "Mine SOL from volatility. A non-custodial, market-neutral engine on Solana that sells into strength, rebuys into weakness, and knows when to stop. In one live run: +10.5% in SOL while the price fell 14% — from just 8 trading days out of 17.",
 };
 
 const mechanics = [
@@ -72,8 +72,8 @@ const sweepers = [
 
 const proofPoints = [
   {
-    title: "Survived a full market cycle",
-    body: "Climb, drop, and a tight 8-day lateral — a stretch that drained earlier runs. This one bled nothing: it sat still through the chop and harvested the turn. The cycle is the ruler, not the good day.",
+    title: "The idle days are the point",
+    body: "In one 17-day run the whole +10.5% came from 8 trading days; the other 9 it sat still on purpose — a stretch that drained earlier builds. It didn't bleed into the chop, it waited it out and harvested the drop.",
   },
   {
     title: "The ruler is SOL, not the dollar",
@@ -352,24 +352,26 @@ export default function HenPage() {
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold">~50%</div>
+                <div className="text-3xl font-bold">8</div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  of the time sitting idle, on purpose
+                  days it actually traded
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold">0</div>
+                <div className="text-3xl font-bold">9</div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  capital bled into the trend
+                  days it chose to sit still
                 </div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mt-6 border-t pt-5">
-              The ruler is SOL, not the dollar. When the price fell, the engine
-              kept turning the drop into more coins — and when it sensed it was
-              selling against the tide, it stopped and waited. The idle half
-              isn&apos;t downtime; it&apos;s the discipline that preserved the
-              capital to harvest the next move.
+              Read that again: the whole +10.5% came out of{" "}
+              <strong className="text-foreground">8 trading days</strong>. The
+              other 9, it did nothing — on purpose. When it sensed it was selling
+              against the tide, it stopped and waited, so the idle stretch
+              isn&apos;t downtime, it&apos;s the discipline that preserved the
+              capital to harvest the drop. The ruler is SOL, not the dollar: the
+              price fell, the coin count rose.
             </p>
           </div>
 
