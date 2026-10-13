@@ -120,8 +120,8 @@ export default function HenPage() {
             You&apos;re holding SOL anyway. It&apos;s sitting there doing
             nothing. <strong className="text-foreground">Miner</strong> turns
             the market&apos;s chop into more of the coin you already hold — and,
-            unlike every grid bot, it knows when to stop and wait instead of
-            bleeding into a trend.
+            unlike conventional grid bots, it reads its own unresolved positions
+            as a signal to stop and wait, instead of bleeding into a trend.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row pt-4">
             <Link
@@ -149,7 +149,7 @@ export default function HenPage() {
               The one thing
             </div>
             <h2 className="text-3xl font-bold tracking-tight">
-              Every grid bot has the same flaw. This one doesn&apos;t.
+              Most grid bots share one flaw. This one reads itself.
             </h2>
           </div>
 
@@ -159,13 +159,14 @@ export default function HenPage() {
                 <X className="h-5 w-5" />
               </div>
               <h3 className="font-semibold text-[15px]">
-                A grid bot never stops
+                The classic grid stalls where it shouldn&apos;t
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                It works beautifully in a choppy market and bleeds badly in a
+                A grid works beautifully in a choppy market and struggles in a
                 trend — it keeps selling into a rally, piling up stuck positions
-                until the wallet is dry. Their own builders admit it: grids
-                aren&apos;t passive income, they only work sideways.
+                until the wallet runs dry. Some pause on a price band or a
+                cooldown, but they react to the chart, not to what&apos;s
+                actually happening to their own positions.
               </p>
             </div>
 
