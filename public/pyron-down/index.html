@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PyRon isn't loading — we're fixing it</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="PyRon isn't loading right now. Your funds are safe in your own vault on Solana and can be moved without us.">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --panel:#121214;
+    --panel-2:#17171a;
+    --border:rgba(255,255,255,.08);
+    --text:#f4f4f5;
+    --muted:#a1a1aa;
+    --muted-2:#8a8a93;
+    --amber:#f4c572;
+    --amber-strong:#f0b84a;
+    --check:#d6a74a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:
+      radial-gradient(900px 500px at 15% -5%, rgba(88,40,120,.45), transparent 60%),
+      radial-gradient(700px 500px at 100% 0%, rgba(20,60,70,.30), transparent 55%),
+      var(--bg);
+    background-repeat:no-repeat;
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+    min-height:100vh;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:56px 24px 80px}
+
+  /* header */
+  .brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .brand .logo{width:26px;height:26px;flex:0 0 auto}
+  .brand .name{font-weight:700;font-size:18px;letter-spacing:.2px}
+  .brand .status{display:flex;align-items:center;gap:8px;color:var(--muted-2);font-size:14px}
+  .brand .dot{width:7px;height:7px;border-radius:50%;background:var(--amber-strong);box-shadow:0 0 10px rgba(240,184,74,.7)}
+
+  h1{font-size:44px;line-height:1.05;letter-spacing:-.02em;margin:34px 0 14px;font-weight:800}
+  .lede{color:var(--muted);font-size:18px;margin:0 0 30px}
+
+  /* checklist */
+  .checks{display:flex;flex-direction:column;gap:18px;margin:0 0 26px}
+  .check{display:flex;gap:14px;align-items:flex-start}
+  .check .ic{flex:0 0 auto;margin-top:2px}
+  .check p{margin:0;color:var(--muted);font-size:16px}
+  .check strong{color:var(--text);font-weight:600}
+
+  hr{border:0;border-top:1px solid var(--border);margin:34px 0}
+
+  h2{font-size:22px;margin:0 0 4px;font-weight:700}
+  .sub{color:var(--muted);margin:0 0 22px;font-size:16px}
+
+  /* steps card */
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--panel);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:28px 30px;
+  }
+  .step{display:flex;gap:18px;align-items:flex-start;padding:14px 0}
+  .step .num{flex:0 0 auto;color:var(--amber);font-weight:700;font-size:16px;width:14px;text-align:center}
+  .step .body{margin:0;color:var(--text);font-size:16px}
+  .step .body a{color:var(--amber);text-decoration:none;font-weight:600}
+  .step .body a:hover{text-decoration:underline}
+
+  .note{
+    display:flex;gap:12px;align-items:flex-start;
+    background:var(--panel-2);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:14px 16px;margin:10px 0 2px;
+  }
+  .note .ic{flex:0 0 auto;margin-top:1px}
+  .note p{margin:0;color:var(--muted);font-size:15px}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    border-radius:10px;font-weight:700;font-size:15px;
+    text-decoration:none;cursor:pointer;border:1px solid transparent;
+  }
+  .btn-ghost{
+    margin-top:14px;
+    padding:11px 16px;
+    color:var(--amber);
+    background:transparent;
+    border-color:rgba(244,197,114,.35);
+  }
+  .btn-ghost:hover{background:rgba(244,197,114,.08)}
+
+  /* fallback panel */
+  .fallback{
+    display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:22px 26px;margin-top:22px;
+  }
+  .fallback p{margin:0;color:var(--muted);font-size:15px;max-width:460px}
+
+  /* footer */
+  .foot{text-align:center;color:var(--muted-2);font-size:14px;margin-top:54px;line-height:1.7}
+
+  @media (max-width:560px){
+    .wrap{padding:40px 18px 64px}
+    h1{font-size:34px}
+    .card{padding:22px 20px}
+    .fallback{padding:20px}
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- Header -->
+    <div class="brand">
+      <!-- PyRon mark -->
+      <svg class="logo" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" stroke="#9aa0a6" stroke-width="1.5" opacity=".5"/>
+        <g stroke="#cfd3d8" stroke-width="1.3" opacity=".9">
+          <path d="M24 4 L24 44 M4 24 L44 24 M10 10 L38 38 M38 10 L10 38"/>
+          <circle cx="24" cy="24" r="12"/>
+          <circle cx="24" cy="24" r="6"/>
+        </g>
+        <circle cx="24" cy="24" r="2.4" fill="#f0b84a"/>
+      </svg>
+      <span class="name">PyRon</span>
+      <span class="status"><span class="dot"></span>PyRon isn't loading — we're fixing it</span>
+    </div>
+
+    <h1>Your funds are safe.</h1>
+    <p class="lede">PyRon isn't loading right now. We're fixing it.</p>
+
+    <!-- Reassurance checklist -->
+    <div class="checks">
+      <div class="check">
+        <svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10.25" stroke="var(--check)" stroke-width="1.5"/>
+          <path d="M7.5 12.3 L10.6 15.2 L16.5 8.8" stroke="var(--check)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p><strong>Your money is in your own vault on Solana's blockchain.</strong> Only your wallet can move it. Not PyRon, not anyone else.</p>
+      </div>
+      <div class="check">
+        <svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10.25" stroke="var(--check)" stroke-width="1.5"/>
+          <path d="M7.5 12.3 L10.6 15.2 L16.5 8.8" stroke="var(--check)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p><strong>Auto-trades are paused until we're back.</strong> Nothing trades without you.</p>
+      </div>
+    </div>
+
+    <!-- NOTE: "Check status" button intentionally removed.
+         This page is served while PyRon is down, so a status link that
+         depends on PyRon's own infra would be down too. Add it back only
+         if you have an EXTERNAL status page (instatus / statuspage / etc). -->
+
+    <hr>
+
+    <h2>Want your funds now?</h2>
+    <p class="sub">You can move them without us.</p>
+
+    <!-- Steps -->
+    <div class="card">
+      <div class="step">
+        <span class="num">1</span>
+        <p class="body">Open <a href="https://squads.xyz" target="_blank" rel="noopener noreferrer">https://squads.xyz</a> and connect the wallet you use with PyRon.</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <div style="flex:1">
+          <p class="body">Your vault opens by itself once your wallet is connected.</p>
+          <div class="note">
+            <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="var(--muted)" stroke-width="1.5"/>
+              <path d="M12 11v5" stroke="var(--muted)" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="12" cy="7.8" r="1.1" fill="var(--muted)"/>
+            </svg>
+            <p>If it doesn't, open your wallet's history and find a PyRon deposit — the address it went to is your vault.</p>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <div style="flex:1">
+          <p class="body">Funds can be withdrawn using Squad's template actions.</p>
+          <!-- TODO: "Watch Tutorial" — only enable if hosted EXTERNALLY (e.g. YouTube),
+               since PyRon-hosted media would be unreachable while this page is live.
+          <a class="btn btn-ghost" href="https://youtu.be/XXXXXXXX" target="_blank" rel="noopener noreferrer">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 1l8 5-8 5z"/></svg>
+            Watch Tutorial
+          </a>
+          -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Open-source fallback -->
+    <div class="fallback">
+      <p>Squads down? Your funds can always be reached through open-source tools that work directly with Solana's blockchain.</p>
+      <!-- TODO: "Learn More" — point to an EXTERNAL doc (GitHub / Solana docs) only.
+      <a class="btn btn-ghost" href="https://github.com/your-org/your-repo" target="_blank" rel="noopener noreferrer">Learn More</a>
+      -->
+    </div>
+
+    <p class="foot">
+      We'll never ask for your recovery phrase or DM you.<br>
+      Only use the Squads link on this page.
+    </p>
+
+  </main>
+</body>
+</html>
