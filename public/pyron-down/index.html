@@ -108,6 +108,10 @@
   /* footer */
   .foot{text-align:center;color:var(--muted-2);font-size:14px;margin-top:54px;line-height:1.7}
 
+  /* Cloudflare diagnostics box (injected server-side in place of the token) */
+  .cf-box{margin:28px auto 0;max-width:620px;color:var(--muted-2);font-size:13px;opacity:.75;text-align:center}
+  .cf-box a{color:var(--muted)}
+
   @media (max-width:560px){
     .wrap{padding:40px 18px 64px}
     h1{font-size:34px}
@@ -213,6 +217,10 @@
       We'll never ask for your recovery phrase or DM you.<br>
       Only use the Squads link on this page.
     </p>
+
+    <!-- Required by Cloudflare for 500-class custom error pages.
+         Cloudflare replaces this token with its diagnostics box (Ray ID, etc). -->
+    <div class="cf-box">::CLOUDFLARE_ERROR_500S_BOX::</div>
 
   </main>
 </body>
