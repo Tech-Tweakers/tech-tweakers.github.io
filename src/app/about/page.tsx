@@ -128,8 +128,8 @@ export default function AboutPage() {
               <h3 className="font-semibold">opencode (Go, archived)</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 XCT-Core, our agent engine, is built from the archived Go
-                version of opencode, by Kujtim Hoxha (MIT license). We forked
-                that code and we maintain our own line of it. This is not the
+                version of opencode, by Kujtim Hoxha (MIT license). We took a
+                copy of that code and work on it internally. This is not the
                 active project that uses the same name today. We have
                 rewritten it heavily: the loop, the tools, the permissions and
                 the sessions are ours now.
