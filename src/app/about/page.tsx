@@ -163,12 +163,6 @@ export default function AboutPage() {
                 The models we run and test belong to their authors. We only
                 choose among them and measure what they do.
               </p>
-              <Link
-                href="/lab"
-                className="inline-flex text-xs text-primary font-medium hover:underline"
-              >
-                See the lab notes
-              </Link>
             </div>
           </div>
         </div>

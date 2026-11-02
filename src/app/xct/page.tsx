@@ -40,7 +40,6 @@ const principles = [
     icon: FlaskConical,
     title: "Count before you believe",
     text: "A bad answer looks like bad luck. Ten identical bad answers are a diagnosis, so we run the same thing ten times and count. Models get the same treatment: we run them through an audit of a real repository and read what they did.",
-    link: { href: "/lab", label: "See the lab notes" },
   },
   {
     icon: Minus,
@@ -81,13 +80,6 @@ export default function XCTPage() {
               <Terminal className="mr-2 h-4 w-4" />
               See XCT-Core
             </Link>
-            <Link
-              href="/lab"
-              className="inline-flex items-center justify-center rounded-md border bg-background px-6 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
-            >
-              <FlaskConical className="mr-2 h-4 w-4" />
-              Read the lab notes
-            </Link>
           </div>
         </div>
       </Section>
@@ -104,7 +96,7 @@ export default function XCTPage() {
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
-            {principles.map(({ icon: Icon, title, text, link }) => (
+            {principles.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
                 className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm"
@@ -114,15 +106,6 @@ export default function XCTPage() {
                 </div>
                 <h3 className="text-xl font-bold">{title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{text}</p>
-                {link && (
-                  <Link
-                    href={link.href}
-                    className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
-                  >
-                    {link.label}{" "}
-                    <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                )}
               </div>
             ))}
           </div>
