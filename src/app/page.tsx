@@ -258,56 +258,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Recent lab notes */}
-      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-12 md:py-16">
-        <div className="text-center space-y-3 max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-            <FlaskConical className="h-3.5 w-3.5" />
-            Lab notes
-          </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Recent notes.
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Things we measured while running this stack.
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto">
-          {[
-            {
-              href: "/lab#audit",
-              title: "Three models, one audit",
-              text: "Same task, same codebase. One decided Go wasn't installed when it was only missing from the PATH.",
-            },
-            {
-              href: "/lab#compaction",
-              title: "We stopped summarising",
-              text: "Context growth per four messages fell from about 4,600 tokens to about 266.",
-            },
-            {
-              href: "/lab#same-model",
-              title: "Same model, same machine, different prompt",
-              text: "And why we stopped maintaining our own inference engine.",
-            },
-          ].map((note) => (
-            <Link
-              key={note.href}
-              href={note.href}
-              className="group rounded-2xl border bg-card p-7 space-y-3 transition-colors hover:border-primary/40"
-            >
-              <h3 className="text-lg font-bold">{note.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {note.text}
-              </p>
-              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary pt-1">
-                Read the note
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
       {/* CTA */}
       <Section className="border-t bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
         <div className="flex flex-col items-center text-center space-y-6 max-w-2xl mx-auto">
