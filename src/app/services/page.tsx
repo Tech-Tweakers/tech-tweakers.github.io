@@ -104,40 +104,42 @@ export default function ServicesPage() {
               : "bg-linear-to-br from-primary/5 via-background to-background py-20 scroll-mt-16"
           }
         >
-          <div className="max-w-5xl mx-auto grid gap-10 md:grid-cols-2 md:items-start">
-            <div className="space-y-6">
-              <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
-                <Icon className="mr-2 h-4 w-4" />
-                {badge}
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                {title}
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {description}
-              </p>
-              {link && (
-                <Link
-                  href={link.href}
-                  className="group inline-flex items-center text-primary font-medium hover:underline"
-                >
-                  {link.label}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              )}
+          <div className="max-w-5xl mx-auto space-y-6">
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
+              <Icon className="mr-2 h-4 w-4" />
+              {badge}
             </div>
-            <div className="rounded-xl border bg-card p-6 md:p-8">
-              <ul className="space-y-3">
-                {items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm text-muted-foreground"
+            <div className="grid gap-10 md:grid-cols-2 md:items-start">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                  {title}
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
+                {link && (
+                  <Link
+                    href={link.href}
+                    className="group inline-flex items-center text-primary font-medium hover:underline"
                   >
-                    <Check className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+                    {link.label}{" "}
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                )}
+              </div>
+              <div className="rounded-xl border bg-card p-6 md:p-8">
+                <ul className="space-y-3">
+                  {items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-muted-foreground"
+                    >
+                      <Check className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </Section>
