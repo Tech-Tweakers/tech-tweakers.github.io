@@ -115,28 +115,60 @@ export default function AboutPage() {
       </Section>
 
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
-        <div className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-2xl font-bold">Credit</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Our agent engine started from{" "}
-            <Link
-              href="https://github.com/opencode-ai/opencode"
-              target="_blank"
-              className="text-primary hover:underline"
-            >
-              opencode
-            </Link>{" "}
-            by Kujtim Hoxha (MIT license, now archived) and has been heavily
-            rewritten since. Our inference layer runs on{" "}
-            <Link
-              href="https://github.com/ggml-org/llama.cpp"
-              target="_blank"
-              className="text-primary hover:underline"
-            >
-              llama.cpp
-            </Link>
-            .
-          </p>
+        <div className="max-w-3xl mx-auto space-y-8">
+          <div className="space-y-3">
+            <h2 className="text-2xl font-bold">Built on Open Source</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Most of what we run stands on other people&apos;s work. We would
+              rather say so than let it look like we started from nothing.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            <div className="rounded-xl border bg-card p-5 space-y-2">
+              <h3 className="font-semibold">opencode</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                XCT-Core, our agent engine, started from this codebase by
+                Kujtim Hoxha (MIT license, now archived). We have rewritten it
+                heavily since: the loop, the tools, the permissions and the
+                sessions are ours now.
+              </p>
+              <Link
+                href="https://github.com/opencode-ai/opencode"
+                target="_blank"
+                className="inline-flex text-xs text-primary font-medium hover:underline"
+              >
+                View on GitHub
+              </Link>
+            </div>
+            <div className="rounded-xl border bg-card p-5 space-y-2">
+              <h3 className="font-semibold">llama.cpp</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                The inference underneath Polaris. We build the orchestration
+                around it, and the engine that actually runs the models is
+                theirs.
+              </p>
+              <Link
+                href="https://github.com/ggml-org/llama.cpp"
+                target="_blank"
+                className="inline-flex text-xs text-primary font-medium hover:underline"
+              >
+                View on GitHub
+              </Link>
+            </div>
+            <div className="rounded-xl border bg-card p-5 space-y-2">
+              <h3 className="font-semibold">Open-weight models</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                The models we run and test belong to their authors. We only
+                choose among them and measure what they do.
+              </p>
+              <Link
+                href="/lab"
+                className="inline-flex text-xs text-primary font-medium hover:underline"
+              >
+                See the lab notes
+              </Link>
+            </div>
+          </div>
         </div>
       </Section>
     </div>
