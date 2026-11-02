@@ -14,7 +14,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Projects | Tech Tweakers",
   description:
-    "What Tech Tweakers builds and runs: Polaris, xct-core, Golden Hen, and earlier work.",
+    "What Tech Tweakers builds and runs: Polaris, XCT-Core, Golden Hen, and earlier work.",
 };
 
 const earlier = [
@@ -32,7 +32,7 @@ const earlier = [
   },
   {
     name: "XCT",
-    text: "The original protocol. Today XCT is a methodology, and xct-core is where it runs.",
+    text: "The original protocol. Today XCT is a methodology, and XCT-Core is where it runs.",
     href: "https://github.com/Tech-Tweakers/xct",
     label: "GitHub",
   },
@@ -126,7 +126,7 @@ export default function ProjectsPage() {
         </div>
       </Section>
 
-      {/* xct-core */}
+      {/* XCT-Core */}
       <Section className="bg-linear-to-br from-primary/5 via-background to-background py-20">
         <div className="rounded-xl border bg-card shadow-sm overflow-hidden">
           <div className="p-8 md:p-10 border-b bg-muted/20 flex flex-col md:flex-row justify-between md:items-start gap-6">
@@ -135,7 +135,7 @@ export default function ProjectsPage() {
                 <Bot className="mr-2 h-4 w-4" />
                 XCT Applied · Agent Engine · Private
               </div>
-              <h2 className="text-3xl font-bold">xct-core</h2>
+              <h2 className="text-3xl font-bold">XCT-Core</h2>
               <p className="text-muted-foreground max-w-2xl leading-relaxed">
                 The agent engine: one Go binary that owns the loop, the tools,
                 the sessions and the context, and serves any front end over

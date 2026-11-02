@@ -137,7 +137,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             XCT started as a protocol. Today it is the methodology behind
             everything we build with language models, and{" "}
-            <span className="font-medium text-foreground">xct-core</span>, our
+            <span className="font-medium text-foreground">XCT-Core</span>, our
             agent engine, is where it lives in code. The model proposes; the
             engine decides what runs.
           </p>
@@ -225,7 +225,7 @@ export default function Home() {
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Bot className="h-5 w-5" />
             </div>
-            <h3 className="font-bold">xct-core</h3>
+            <h3 className="font-bold">XCT-Core</h3>
             <p className="text-sm text-muted-foreground">
               The agent engine: one Go binary that owns the loop, the tools, the
               sessions and the context, and serves any front end over HTTP and

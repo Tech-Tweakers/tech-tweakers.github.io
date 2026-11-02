@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "XCT | Tech Tweakers",
   description:
-    "XCT, Execution Control Transfer: the methodology Tech Tweakers uses to build systems around language models, and the xct-core engine that implements it.",
+    "XCT, Execution Control Transfer: the methodology Tech Tweakers uses to build systems around language models, and the XCT-Core engine that implements it.",
 };
 
 const principles = [
@@ -79,7 +79,7 @@ export default function XCTPage() {
               className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
             >
               <Terminal className="mr-2 h-4 w-4" />
-              See xct-core
+              See XCT-Core
             </Link>
             <Link
               href="/lab"
@@ -134,13 +134,13 @@ export default function XCTPage() {
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tight">
-              From Protocol to xct-core
+              From Protocol to XCT-Core
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               XCT began with the model returning one proposed step as JSON, the
               system validating it and a tool executing it. Then models learned
               to call tools natively and the format stopped mattering. What we
-              kept is the division of labor, and xct-core is where it runs.
+              kept is the division of labor, and XCT-Core is where it runs.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
@@ -148,7 +148,7 @@ export default function XCTPage() {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <Code className="h-5 w-5" />
               </div>
-              <h3 className="font-bold">xct-core</h3>
+              <h3 className="font-bold">XCT-Core</h3>
               <p className="text-sm text-muted-foreground">
                 One Go binary that owns the loop, the tools, the sessions and
                 the context, and serves any front end over HTTP and SSE.
