@@ -13,7 +13,7 @@ export function Footer() {
             >
               Tech Tweakers
             </Link>
-            . Open source driven.
+            , Brazil.
           </p>
         </div>
         <div className="flex gap-4">
@@ -28,6 +28,12 @@ export function Footer() {
               className="text-sm font-medium text-muted-foreground hover:underline underline-offset-4"
             >
               Projects
+            </Link>
+             <Link
+              href="/lab"
+              className="text-sm font-medium text-muted-foreground hover:underline underline-offset-4"
+            >
+              Lab
             </Link>
         </div>
       </div>

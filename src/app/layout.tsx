@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tech Tweakers | Cloud Solutions & Backend Engineering",
-  description: "Cloud solutions, backend engineering, and applied AI. Focused on scalability, maintainability, and real-world impact.",
+  title: "Tech Tweakers | Private LLM infrastructure and agents",
+  description: "We run language models on your hardware and measure what they actually do. Cloud infrastructure, private LLM serving and agents.",
 };
 
 export default function RootLayout({

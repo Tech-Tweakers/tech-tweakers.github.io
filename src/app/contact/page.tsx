@@ -4,53 +4,56 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact | Tech Tweakers",
-  description: "Get in touch with us for engineering consulting and cloud solutions.",
+  description:
+    "Get in touch about cloud infrastructure, private LLM serving and agents.",
 };
+
+const field =
+  "flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Section className="bg-linear-to-br from-primary/5 via-background to-background py-20">
         <div className="max-w-3xl mx-auto space-y-8 text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Let's Build Together</h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Let&apos;s Build Together</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            If you value engineering quality, scalability, and technical excellence, we'd love to hear from you.
+            Tell us about the project or the problem. A few lines is enough.
           </p>
         </div>
       </Section>
 
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 ">
         <div className="max-w-xl mx-auto rounded-xl border bg-card p-8 shadow-sm">
-           <form action="https://formsubmit.co/andreh.torres@hotmail.com" method="POST" className="space-y-6">
-             <input type="hidden" name="_subject" value="Nova mensagem do site Tech Tweakers" />
-             <input type="hidden" name="_captcha" value="false" />
-             <input type="hidden" name="_next" value="https://techtweakers.com/contact" />
-             <div className="space-y-2">
-               <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Name</label>
-               <input type="text" id="name" name="name" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Your name" />
-             </div>
-             <div className="space-y-2">
-               <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email</label>
-               <input type="email" id="email" name="email" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="name@example.com" />
-             </div>
-             <div className="space-y-2">
-               <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Message</label>
-               <textarea id="message" name="message" className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Tell us about your project or technical challenge..." />
-             </div>
-             <button type="submit" className="inline-flex h-10 w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
-               Send Message
-             </button>
-           </form>
-           
-           <div className="mt-8 pt-8 border-t flex flex-col items-center gap-4 text-center">
-             <div className="flex items-center text-muted-foreground">
-               <Github className="mr-2 h-4 w-4" />
-               <a href="https://github.com/Tech-Tweakers" target="_blank" className="hover:text-foreground transition-colors">github.com/Tech-Tweakers</a>
-             </div>
-           </div>
+          <form action="https://formsubmit.co/andreh.torres@hotmail.com" method="POST" className="space-y-6">
+            <input type="hidden" name="_subject" value="Nova mensagem do site Tech Tweakers" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://techtweakers.org/contact/" />
+            <div className="space-y-2">
+              <label htmlFor="name" className="text-sm font-medium leading-none">Name</label>
+              <input type="text" id="name" name="name" className={`${field} h-10`} placeholder="Your name" />
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="email" className="text-sm font-medium leading-none">Email</label>
+              <input type="email" id="email" name="email" className={`${field} h-10`} placeholder="name@example.com" />
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="message" className="text-sm font-medium leading-none">Message</label>
+              <textarea id="message" name="message" className={`${field} min-h-[120px]`} placeholder="Tell us about your project or technical challenge..." />
+            </div>
+            <button type="submit" className="inline-flex h-10 w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+              Send Message
+            </button>
+          </form>
+
+          <div className="mt-8 pt-8 border-t flex flex-col items-center gap-4 text-center">
+            <div className="flex items-center text-muted-foreground">
+              <Github className="mr-2 h-4 w-4" />
+              <a href="https://github.com/Tech-Tweakers" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">github.com/Tech-Tweakers</a>
+            </div>
+          </div>
         </div>
       </Section>
     </div>
   );
 }
-

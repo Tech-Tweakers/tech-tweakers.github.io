@@ -10,6 +10,9 @@ import logo from "@/../public/logo.png";
 const navItems = [
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
+    { name: "Cases", href: "/cases" },
+    { name: "Lab", href: "/lab" },
+    { name: "XCT", href: "/xct" },
     { name: "About", href: "/about" },
 ];
 

@@ -9,13 +9,8 @@ import {
   BrainCircuit,
   Workflow,
   Cpu,
-  Layers,
+  FlaskConical,
   Bot,
-  ExternalLink,
-  Coins,
-  Sprout,
-  Vault,
-  Anchor,
 } from "lucide-react";
 
 export default function Home() {
@@ -51,104 +46,59 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Featured product — Golden Hen Suite */}
-      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-12 md:py-16">
-        <div className="text-center space-y-3 max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-            <Coins className="h-3.5 w-3.5" />
-            Built in our own production
-          </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            The Golden Hen Suite.
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Three self-custody engines for one job: managing wealth on-chain.
-            Built on XCT, run in our own production first — honest enough to
-            reconcile every run against the blockchain, cent for cent.
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto">
-          <Link
-            href="/hen"
-            className="group rounded-2xl border bg-card p-7 space-y-3 transition-colors hover:border-primary/40"
-          >
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Sprout className="h-5 w-5" />
-              </span>
-              <span className="text-[10px] font-mono uppercase tracking-wider text-primary">
-                live · on-chain
-              </span>
-            </div>
-            <h3 className="text-lg font-bold">Miner</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Mines SOL from volatility. A market-neutral engine that sells into
-              strength, rebuys into weakness — and knows when to stop instead of
-              bleeding into a trend.
-            </p>
-            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary pt-1">
-              See how it works
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </span>
-          </Link>
-
-          <div className="rounded-2xl border border-dashed bg-card/50 p-7 space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Vault className="h-5 w-5" />
-              </span>
-              <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
-                coming soon
-              </span>
-            </div>
-            <h3 className="text-lg font-bold">Treasury</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Preserves wealth. Sweeps the surplus off the table and manages the
-              crystallized stack like a treasurer — protecting on the way down,
-              keeping the gain.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-dashed bg-card/50 p-7 space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Anchor className="h-5 w-5" />
-              </span>
-              <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
-                coming soon
-              </span>
-            </div>
-            <h3 className="text-lg font-bold">Pirate</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Hunts asymmetric opportunity. Risk assumed, stated plainly — the
-              engine for the ones who want the high seas, not the harbor.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* What We Do — 3 Pillars */}
+      {/* What We Do */}
       <Section className="bg-linear-to-br from-primary/5 via-background to-background">
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             What We Do
           </h2>
           <p className="text-lg text-muted-foreground">
-            Three things we do well. Not everything — just these.
+            Four things we do well. Not everything — just these.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Cloud className="h-6 w-6" />
             </div>
             <h3 className="text-xl font-bold">Cloud & Automation</h3>
             <p className="text-muted-foreground">
-              IaC, CI/CD, Kubernetes, observability. We set up and maintain the
-              infra so your team can focus on the product.
+              IaC with Terraform, Pulumi or CloudFormation. CI/CD, Kubernetes, observability with Grafana, Prometheus and OpenTelemetry. We set up and maintain the infra so your team can focus on the product.
             </p>
             <Link
               href="/services#cloud"
+              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
+            >
+              Learn more{" "}
+              <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+          <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <Cpu className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-bold">Private LLM Serving</h3>
+            <p className="text-muted-foreground">
+              Open-weight models on your own hardware or cluster, behind an OpenAI-compatible API, with model swapping and monitoring. Your prompts and data stay with you.
+            </p>
+            <Link
+              href="/services#serving"
+              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
+            >
+              Learn more{" "}
+              <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+          <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <Workflow className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-bold">Agents & Workflows</h3>
+            <p className="text-muted-foreground">
+              Agents and LLM pipelines for document validation, process automation and operating systems, with logging, fallbacks and a human in the loop where it matters.
+            </p>
+            <Link
+              href="/services#workflows"
               className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
             >
               Learn more{" "}
@@ -161,8 +111,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-bold">Model Training</h3>
             <p className="text-muted-foreground">
-              LoRA and full fine-tuning of open-source models for your domain.
-              We handle data, training, eval, and deployment.
+              LoRA and full fine-tuning of open-weight models for your domain. We handle data, training, eval and deployment, and tell you when a better prompt is enough.
             </p>
             <Link
               href="/services#training"
@@ -172,70 +121,58 @@ export default function Home() {
               <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-          <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <Workflow className="h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-bold">LLM Workflows</h3>
-            <p className="text-muted-foreground">
-              Pipelines for document validation, data enrichment, and process
-              automation using LLMs with guardrails.
-            </p>
-            <Link
-              href="/services#workflows"
-              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
-            >
-              Learn more{" "}
-              <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
         </div>
       </Section>
 
-      {/* XCT Protocol */}
+      {/* XCT Methodology */}
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Shield className="mr-2 h-4 w-4" />
-            How We Work With AI
+            How We Build
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             XCT — Execution Control Transfer
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Born from real incidents with autonomous AI in production.
-            The rule is simple: the model proposes, the system validates,
-            deterministic tools execute. No exceptions.
+            XCT started as a protocol. Today it is the methodology behind
+            everything we build with language models, and{" "}
+            <span className="font-medium text-foreground">xct-core</span>, our
+            agent engine, is where it lives in code. The model proposes; the
+            engine decides what runs.
           </p>
-          <div className="grid gap-6 md:grid-cols-3 mt-12">
+          <div className="grid gap-6 md:grid-cols-3 mt-12 text-left">
             <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <Zap className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-bold">Model Proposes</h3>
+              <h3 className="text-xl font-bold">Who Decides</h3>
               <p className="text-muted-foreground">
-                The model looks at the context and suggests one action.
-                Just one. No multi-step plans, no autonomous chains.
-              </p>
-            </div>
-            <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Shield className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-bold">System Validates</h3>
-              <p className="text-muted-foreground">
-                The system checks the proposal. It can approve, reject, or
-                ask for something else. The model doesn&apos;t get to override.
+                The model suggests the next step. The engine owns the loop, the
+                tools and the context, and decides what runs. Decision is cheap,
+                execution is expensive, so they live in different hands.
               </p>
             </div>
             <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <Terminal className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-bold">Tools Execute</h3>
+              <h3 className="text-xl font-bold">Rules Live in Code</h3>
               <p className="text-muted-foreground">
-                Deterministic tools do the actual work. If something fails,
-                it comes back as data — not as a crash.
+                Anything that has to hold goes in code, not in the prompt. A
+                shell command runs unasked only if every part of it is
+                read-only, and the model can&apos;t talk its way past that.
+              </p>
+            </div>
+            <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <FlaskConical className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold">Count Before You Believe</h3>
+              <p className="text-muted-foreground">
+                One bad answer looks like bad luck. Ten identical ones are a
+                diagnosis. We run things ten times, and we run models through
+                the same audit before we trust them.
               </p>
             </div>
           </div>
@@ -251,32 +188,36 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Polaris Ecosystem */}
+      {/* What we build */}
       <Section className="bg-linear-to-br from-primary/5 via-background to-background">
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            The Polaris Ecosystem
+            What We Build
           </h2>
           <p className="text-lg text-muted-foreground">
-            Tools we built for ourselves and now maintain in production.
+            Tools we built for ourselves and run in production. Most are private.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-xl border bg-card p-6 space-y-3">
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Cpu className="h-5 w-5" />
             </div>
-            <h3 className="font-bold">Polaris Core</h3>
+            <h3 className="font-bold">Polaris</h3>
             <p className="text-sm text-muted-foreground">
-              C++ bindings for llama.cpp with Python integration. Handles
-              inference with JSON early-stop for XCT.
+              An inference orchestrator in Go on top of llama-server. An
+              OpenAI-compatible API, in-place model swaps with rollback, running
+              on k3s with a GPU. It sits under our agents and client deployments.
             </p>
             <div className="flex flex-wrap gap-1.5">
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
-                C++
+                Go
               </span>
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
-                Python
+                llama.cpp
+              </span>
+              <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
+                k3s
               </span>
             </div>
           </div>
@@ -284,57 +225,23 @@ export default function Home() {
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Bot className="h-5 w-5" />
             </div>
-            <h3 className="font-bold">Polaris v2</h3>
+            <h3 className="font-bold">xct-core</h3>
             <p className="text-sm text-muted-foreground">
-              Institutional chatbot with RAG, voice, and multi-platform
-              support. For companies that need a conversational assistant
-              with guardrails.
-            </p>
-            <Link
-              href="https://tech-tweakers.github.io/polaris-v2-web/#/"
-              target="_blank"
-              className="inline-flex items-center text-xs text-primary font-medium hover:underline"
-            >
-              Live Demo
-              <ExternalLink className="ml-1 h-3 w-3" />
-            </Link>
-          </div>
-          <div className="rounded-xl border bg-card p-6 space-y-3">
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <Workflow className="h-5 w-5" />
-            </div>
-            <h3 className="font-bold">Polaris v3</h3>
-            <p className="text-sm text-muted-foreground">
-              Deterministic agent powered by XCT, customized to each use
-              case. For critical automation — infra, finance, compliance
-              — where the model proposes and the system decides.
+              The agent engine: one Go binary that owns the loop, the tools, the
+              sessions and the context, and serves any front end over HTTP and
+              SSE. Started from opencode (MIT) and heavily rewritten.
             </p>
             <div className="flex flex-wrap gap-1.5">
+              <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
+                Go
+              </span>
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
                 XCT
               </span>
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
-                FastAPI
+                SSE
               </span>
             </div>
-          </div>
-          <div className="rounded-xl border bg-card p-6 space-y-3">
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <Layers className="h-5 w-5" />
-            </div>
-            <h3 className="font-bold">XCT-Qwen3-4B</h3>
-            <p className="text-sm text-muted-foreground">
-              LoRA-trained model for XCT execution. Not a chatbot — it
-              proposes actions within protocol constraints.
-            </p>
-            <Link
-              href="https://huggingface.co/tech-tweakers/XCT-Qwen3-4B"
-              target="_blank"
-              className="inline-flex items-center text-xs text-primary font-medium hover:underline"
-            >
-              HuggingFace
-              <ExternalLink className="ml-1 h-3 w-3" />
-            </Link>
           </div>
         </div>
         <div className="mt-10 text-center">
@@ -348,6 +255,56 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Recent lab notes */}
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-12 md:py-16">
+        <div className="text-center space-y-3 max-w-2xl mx-auto mb-10">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+            <FlaskConical className="h-3.5 w-3.5" />
+            Lab notes
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Recent notes.
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Things we measured while running this stack.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3 max-w-5xl mx-auto">
+          {[
+            {
+              href: "/lab#audit",
+              title: "Three models, one audit",
+              text: "Same task, same codebase. One decided Go wasn't installed when it was only missing from the PATH.",
+            },
+            {
+              href: "/lab#compaction",
+              title: "We stopped summarising",
+              text: "Context growth per four messages fell from about 4,600 tokens to about 266.",
+            },
+            {
+              href: "/lab#same-model",
+              title: "Same model, same machine, different prompt",
+              text: "And why we stopped maintaining our own inference engine.",
+            },
+          ].map((note) => (
+            <Link
+              key={note.href}
+              href={note.href}
+              className="group rounded-2xl border bg-card p-7 space-y-3 transition-colors hover:border-primary/40"
+            >
+              <h3 className="text-lg font-bold">{note.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {note.text}
+              </p>
+              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary pt-1">
+                Read the note
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
       {/* CTA */}
       <Section className="border-t bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
         <div className="flex flex-col items-center text-center space-y-6 max-w-2xl mx-auto">
@@ -355,8 +312,8 @@ export default function Home() {
             Got a problem that fits?
           </h2>
           <p className="text-muted-foreground text-lg">
-            If you need control over LLMs in production — not demos,
-            not proofs of concept — we should talk.
+            If you need to run language models on your own hardware and know
+            what they actually do, we should talk.
           </p>
           <Link
             href="/contact"
