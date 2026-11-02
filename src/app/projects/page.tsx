@@ -98,12 +98,13 @@ export default function ProjectsPage() {
               <Cpu className="mr-2 h-4 w-4" />
               Inference · Private
             </div>
-            <h2 className="text-3xl font-bold">Polaris</h2>
+            <h2 className="text-3xl font-bold">Polaris v4</h2>
             <p className="text-muted-foreground max-w-2xl leading-relaxed">
-              An inference orchestrator in Go on top of llama-server. It
-              exposes an OpenAI-compatible API, swaps models in place with a
-              rollback, and runs on k3s with a GPU. It is what sits under our
-              agents and our client deployments.
+              The fourth generation of our inference line. Today it is an
+              orchestrator in Go on top of llama-server: it exposes an
+              OpenAI-compatible API, swaps models in place with a rollback, and
+              runs on k3s with a GPU. It is what sits under our agents and our
+              client deployments.
             </p>
           </div>
           <div className="p-8 md:p-10 grid md:grid-cols-2 gap-8">
@@ -122,6 +123,35 @@ export default function ProjectsPage() {
               <h3 className="font-semibold text-lg">Built With</h3>
               <Tags items={["Go", "llama.cpp", "k3s", "GPU"]} />
             </div>
+          </div>
+          <div className="p-8 md:p-10 border-t space-y-6">
+            <h3 className="font-semibold text-lg">How Polaris Got Here</h3>
+            <ol className="grid gap-4 md:grid-cols-4">
+              {[
+                {
+                  v: "polaris-core",
+                  t: "A C++ binding for llama.cpp with Python integration. Our first inference layer.",
+                },
+                {
+                  v: "Polaris v2",
+                  t: "An institutional chatbot with RAG, voice and multi-platform support, with guardrails.",
+                },
+                {
+                  v: "Polaris v3",
+                  t: "A deterministic agent built on XCT, for critical automation where the model proposes and the system decides.",
+                },
+                {
+                  v: "Polaris v4",
+                  t: "Today: an orchestrator in Go on top of llama-server, under our agents and client deployments.",
+                },
+              ].map((step, i) => (
+                <li key={step.v} className="rounded-lg border bg-background p-4 space-y-2">
+                  <div className="text-xs font-mono text-primary">0{i + 1}</div>
+                  <div className="font-semibold">{step.v}</div>
+                  <p className="text-sm text-muted-foreground">{step.t}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </Section>

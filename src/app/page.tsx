@@ -203,11 +203,14 @@ export default function Home() {
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Cpu className="h-5 w-5" />
             </div>
-            <h3 className="font-bold">Polaris</h3>
+            <h3 className="font-bold">Polaris v4</h3>
             <p className="text-sm text-muted-foreground">
-              An inference orchestrator in Go on top of llama-server. An
-              OpenAI-compatible API, in-place model swaps with rollback, running
-              on k3s with a GPU. It sits under our agents and client deployments.
+              Our inference line, now in its fourth generation. It began as a
+              C++ binding for llama.cpp, grew into an institutional chatbot
+              with RAG and voice (v2) and an XCT agent for critical automation
+              (v3). Today it is an orchestrator in Go on top of llama-server:
+              OpenAI-compatible API, in-place model swaps with rollback, on k3s
+              with a GPU. It sits under our agents and client deployments.
             </p>
             <div className="flex flex-wrap gap-1.5">
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
