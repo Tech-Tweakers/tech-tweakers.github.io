@@ -31,8 +31,8 @@
     --card-foreground: #faf7f6;
     --popover: #140d0d;
     --popover-foreground: #faf7f6;
-    --primary: #2563EB;
-    --primary-foreground: #ffffff;
+    --primary: #c98b5a;
+    --primary-foreground: #140d0d;
     --secondary: #2a1f1e;
     --secondary-foreground: #faf7f6;
     --muted: #2a1f1e;
@@ -43,7 +43,7 @@
     --destructive-foreground: #faf7f6;
     --border: #2a1f1e;
     --input: #2a1f1e;
-    --ring: #2563EB;
+    --ring: #c98b5a;
 }
 
 @theme inline {
