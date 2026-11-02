@@ -170,7 +170,7 @@ export default function ProjectsPage() {
                 The agent engine: one Go binary that owns the loop, the tools,
                 the sessions and the context, and serves any front end over
                 HTTP and SSE. Chat and IDE front ends are clients of it. It
-                started from the opencode codebase (MIT, now archived) and has
+                started from the archived Go version of opencode (MIT) and has
                 been heavily rewritten. It is where the XCT methodology runs in
                 code.
               </p>

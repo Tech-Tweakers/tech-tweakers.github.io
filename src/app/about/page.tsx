@@ -125,12 +125,14 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-xl border bg-card p-5 space-y-2">
-              <h3 className="font-semibold">opencode</h3>
+              <h3 className="font-semibold">opencode (Go, archived)</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                XCT-Core, our agent engine, started from this codebase by
-                Kujtim Hoxha (MIT license, now archived). We have rewritten it
-                heavily since: the loop, the tools, the permissions and the
-                sessions are ours now.
+                XCT-Core, our agent engine, is built from the archived Go
+                version of opencode, by Kujtim Hoxha (MIT license). We forked
+                that code and we maintain our own line of it. This is not the
+                active project that uses the same name today. We have
+                rewritten it heavily: the loop, the tools, the permissions and
+                the sessions are ours now.
               </p>
               <Link
                 href="https://github.com/opencode-ai/opencode"

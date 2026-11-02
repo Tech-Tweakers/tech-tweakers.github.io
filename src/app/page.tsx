@@ -232,7 +232,7 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">
               The agent engine: one Go binary that owns the loop, the tools, the
               sessions and the context, and serves any front end over HTTP and
-              SSE. Started from opencode (MIT) and heavily rewritten.
+              SSE. Built from the archived Go version of opencode (MIT) and heavily rewritten.
             </p>
             <div className="flex flex-wrap gap-1.5">
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
