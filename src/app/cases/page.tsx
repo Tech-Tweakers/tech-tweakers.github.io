@@ -94,7 +94,7 @@ export default function CasesPage() {
               A platform that costs less and grows with its users
             </h2>
             <p className="text-muted-foreground max-w-2xl leading-relaxed">
-              The platform was running on a handful of servers that were mostly
+              A platform was running on a handful of servers that were mostly
               idle, and that could not safely take a sudden wave of users. The
               company was about to launch. They needed it to cost less and to
               handle growth without anyone watching it. We moved it to managed
