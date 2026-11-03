@@ -195,7 +195,7 @@ export default function Home() {
             What We Build
           </h2>
           <p className="text-lg text-muted-foreground">
-            Tools we built for ourselves and run in production.
+            Tools we built for ourselves and run in production. XCT-Core and Polaris v4 work as a pair: one decides what runs, the other runs the model.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">

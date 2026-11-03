@@ -43,15 +43,6 @@ const v3Parts: { name: string; text: string; href?: string; label?: string }[] =
   },
 ];
 
-const earlier: { name: string; text: string; href?: string; label?: string }[] = [
-  {
-    name: "nebula-monitor",
-    text: "An ESP32 monitor for IT resources, online or local.",
-    href: "https://github.com/Tech-Tweakers/nebula-monitor",
-    label: "GitHub",
-  },
-];
-
 function Tags({ items }: { items: string[] }) {
   return (
     <div className="flex flex-wrap gap-2">
@@ -157,6 +148,7 @@ export default function ProjectsPage() {
                 "OpenAI-compatible API in front of llama-server",
                 "Hot model swap, with rollback if the new model doesn't come up",
                 "Routing between models, and sessions",
+                "Works as a pair with XCT-Core: the engine decides what runs, Polaris runs the model",
                 "White label: it runs under your brand, on your own infrastructure",
                 "Your prompts and data stay on your hardware",
               ]}
@@ -184,7 +176,8 @@ export default function ProjectsPage() {
                 HTTP and SSE. Chat and IDE front ends are clients of it. It
                 started from the archived Go version of opencode (MIT) and has
                 been heavily rewritten. It is where the XCT methodology runs in
-                code.
+                code, and together with Polaris v4 it is the pair behind
+                everything we run.
               </p>
             </div>
             <Link
@@ -273,8 +266,8 @@ export default function ProjectsPage() {
             Where we came from. Polaris v3 was a whole stack of its own.
           </p>
         </div>
-        <div className="grid gap-6 lg:grid-cols-3">
-          <div className="rounded-xl border bg-card p-6 space-y-5 lg:col-span-2">
+        <div className="grid gap-6">
+          <div className="rounded-xl border bg-card p-6 space-y-5">
             <div className="space-y-2">
               <h3 className="text-lg font-bold">Polaris v3</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -284,7 +277,7 @@ export default function ProjectsPage() {
                 XCT-Core and Polaris v4 cover its role.
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {v3Parts.map((part) => (
                 <div
                   key={part.name}
@@ -307,23 +300,6 @@ export default function ProjectsPage() {
               ))}
             </div>
           </div>
-          {earlier.map((p) => (
-            <div key={p.name} className="flex flex-col gap-3 rounded-xl border bg-card p-6">
-              <h3 className="font-bold">{p.name}</h3>
-              <p className="text-sm text-muted-foreground">{p.text}</p>
-              {p.href && (
-                <Link
-                  href={p.href}
-                  target="_blank"
-                  className="mt-auto inline-flex items-center text-xs text-primary font-medium hover:underline"
-                >
-                  {p.label === "GitHub" && <Github className="mr-1 h-3 w-3" />}
-                  {p.label}
-                  {p.label !== "GitHub" && <ExternalLink className="ml-1 h-3 w-3" />}
-                </Link>
-              )}
-            </div>
-          ))}
         </div>
       </Section>
     </div>
