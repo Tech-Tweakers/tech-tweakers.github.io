@@ -178,7 +178,11 @@ export default function CasesPage() {
               is written down as code, so it can be reviewed, repeated and
               rebuilt. We found out how well that works the hard way: one of
               the clusters was deleted by mistake, and we brought it back from
-              the code.
+              the code. It went smoothly because we had built it to be rebuilt:
+              the cluster and the databases are written as Terraform, and every
+              service has its own solid pipeline that builds and deploys it
+              from scratch. Recovery meant running them again, not fixing
+              things by hand.
             </p>
           </div>
 
