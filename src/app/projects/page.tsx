@@ -20,26 +20,26 @@ export const metadata: Metadata = {
 
 const earlier: { name: string; text: string; href?: string; label?: string }[] = [
   {
+    name: "Polaris v3",
+    text: "A deterministic agent built on XCT. It ran on polaris-core and on XCT-Qwen3-4B, both made for it. Today XCT-Core and Polaris v4 cover its role.",
+  },
+  {
     name: "polaris-core",
-    text: "A C++ binding for llama.cpp, from before we adopted llama-server.",
+    text: "A C++ binding for llama.cpp, built for Polaris v3: the inference layer under the agent.",
     href: "https://github.com/Tech-Tweakers/polaris-core",
     label: "GitHub",
   },
   {
-    name: "Polaris v3",
-    text: "A deterministic agent built on XCT. XCT-Core and Polaris v4 took over its job.",
+    name: "XCT-Qwen3-4B",
+    text: "A small model fine-tuned to work inside the protocol, built for Polaris v3.",
+    href: "https://huggingface.co/tech-tweakers/XCT-Qwen3-4B",
+    label: "HuggingFace",
   },
   {
     name: "XCT",
     text: "The original protocol. Today XCT is a methodology, and XCT-Core is where it runs.",
     href: "https://github.com/Tech-Tweakers/xct",
     label: "GitHub",
-  },
-  {
-    name: "XCT-Qwen3-4B",
-    text: "An early fine-tune from the protocol period.",
-    href: "https://huggingface.co/tech-tweakers/XCT-Qwen3-4B",
-    label: "HuggingFace",
   },
   {
     name: "nebula-monitor",
