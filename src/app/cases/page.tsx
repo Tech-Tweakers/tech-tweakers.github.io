@@ -221,7 +221,6 @@ export default function CasesPage() {
                     "Automatic Kubernetes upgrades from the provider are switched off. Upgrades are now a deliberate step, tried first and applied in a planned window",
                     "Bad settings are caught before they can reach production",
                     "Changes reach production through a path with checks. Nothing goes live on its own: it needs two people to approve and a deliberate confirmation",
-                    "Monitoring lives outside the platform it watches, so it keeps working when the platform doesn’t",
                   ]}
                 />
               </Block>
