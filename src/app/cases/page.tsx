@@ -123,6 +123,7 @@ export default function CasesPage() {
               <Block icon={ShieldCheck} title="What we did">
                 <Points
                   items={[
+                    "The old servers were already built as Terraform, written by us from scratch, so we knew exactly what we were replacing",
                     "Measured what the old servers really used before choosing anything, and sized the new setup from that",
                     "Moved the services one at a time onto a managed Kubernetes cluster (DigitalOcean DOKS), and switched the old servers off only after the new ones had proven themselves",
                     "Set Kubernetes to add copies of the app, and servers, when demand rises and remove them when it drops, so it only pays for what it uses",
