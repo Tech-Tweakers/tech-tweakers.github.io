@@ -246,7 +246,9 @@ export default function CasesPage() {
               A platform that handles trades can’t find out it is broken from a
               customer. We built the monitoring on its own dedicated server,
               outside the cluster it watches, so it keeps working even when the
-              cluster doesn’t. The cluster only sends its numbers out.
+              cluster doesn’t. The cluster only sends its numbers out, and when
+              something critical happens, the alarm reaches the team on
+              Telegram.
             </p>
           </div>
 
@@ -257,6 +259,11 @@ export default function CasesPage() {
                   value: "5",
                   label: "dashboards, one per question",
                   note: "written as code, not clicked together",
+                },
+                {
+                  value: "Telegram",
+                  label: "pages the team on critical alerts",
+                  note: "in production; quiet elsewhere on purpose",
                 },
                 {
                   value: "30 d",
@@ -271,9 +278,9 @@ export default function CasesPage() {
                 <Points
                   items={[
                     "Metrics and logs go from the cluster to a separate server that stores them, shows them and raises the alarms",
+                    "Alarms that reach people: in production, critical alerts go straight to the team on Telegram, with no one needing to be looking at a screen. Elsewhere they stay quiet on purpose, so nobody learns to ignore them",
                     "One dashboard anyone can read (is something broken?), one for developers per service, one for traffic, one for container pressure, and one for load tests",
                     "Alerts for the servers, for the state of the cluster (restarts, out-of-memory kills, pods stuck waiting) and for pressure on each container",
-                    "In production, critical alerts page the team on Telegram. Elsewhere they stay quiet on purpose, so nobody learns to ignore them",
                     "The dashboards sit behind a login, and everything is deployed by pipeline like the rest",
                   ]}
                 />
