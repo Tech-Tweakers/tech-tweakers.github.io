@@ -1,5 +1,6 @@
 import { Section } from "@/components/layout/Section";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Pickaxe,
   MessageSquare,
@@ -17,7 +18,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Miner — Golden Hen Suite | Tech Tweakers",
   description:
-    "Mine SOL from volatility. A non-custodial, market-neutral engine on Solana that sells into strength, rebuys into weakness, and knows when to stop. In one live run: +10.5% in SOL while the price fell 14% — from just 8 trading days out of 17.",
+    "Mine SOL from volatility. A non-custodial, market-neutral engine on Solana that sells into strength, rebuys into weakness, and knows when to stop. In one live 30-day run: +12.8% in SOL while the price fell 16%, with the engine itself behind about a third of that.",
 };
 
 const mechanics = [
@@ -73,11 +74,15 @@ const sweepers = [
 const proofPoints = [
   {
     title: "The idle days are the point",
-    body: "In one 17-day run the whole +10.5% came from 8 trading days; the other 9 it sat still on purpose — a stretch that drained earlier builds. It didn't bleed into the chop, it waited it out and harvested the drop.",
+    body: "In one 30-day run it closed trades on 20 of 31 calendar days and sat still on the other 11, on purpose. It didn't bleed into the chop, it waited it out and harvested the drop.",
   },
   {
     title: "The ruler is SOL, not the dollar",
     body: "Net worth measured in SOL-equivalent against baseline. A dollar figure falling while SOL falls isn't a loss — it's the ruler shrinking. The question is simple: more SOL at the end, or not.",
+  },
+  {
+    title: "Where the number comes from",
+    body: "Of the +0.166 SOL, about +0.058 is the engine itself, measured against just holding the same mix. About +0.109 is idle USDC that bought more SOL because the price fell. In dollars, cashing out at the end would have been −$8.58. We show all three because one number alone misleads.",
   },
   {
     title: "Not a promise of profit",
@@ -106,14 +111,14 @@ export default function HenPage() {
             Golden Hen Suite · Mining Engine
           </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-balance">
-            The market dropped 14%.
+            The market dropped 16%.
             <br />
-            <span className="text-primary">Our SOL grew 10%.</span>
+            <span className="text-primary">Our SOL grew 13%.</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
-            Same 17 days. The price of SOL fell 14% — and the wallet ended with{" "}
-            <strong className="text-foreground">10% more SOL</strong> than it
-            started. Not a prediction. Not a backtest. A real engine, running
+            Same 30 days. The price of SOL fell 16%, and the wallet ended with{" "}
+            <strong className="text-foreground">12.8% more SOL</strong> than it
+            started, counted in SOL. Not a prediction. Not a backtest. A real engine, running
             live on Solana, mining volatility instead of betting on direction.
           </p>
           <p className="text-base text-muted-foreground max-w-3xl">
@@ -335,44 +340,77 @@ export default function HenPage() {
             <div className="flex items-center justify-between mb-6">
               <span className="text-sm font-semibold">One real run</span>
               <span className="font-mono text-xs text-muted-foreground">
-                Sep 25 – Oct 12, 2026 · 17 days
+                Sep 25 – Oct 25, 2026 · 30 days
               </span>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               <div>
-                <div className="text-3xl font-bold text-primary">+10.5%</div>
+                <div className="text-3xl font-bold text-primary">+12.8%</div>
                 <div className="text-xs text-muted-foreground mt-1">
                   more SOL, measured in SOL
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-red-500">−14%</div>
+                <div className="text-3xl font-bold text-red-500">−16%</div>
                 <div className="text-xs text-muted-foreground mt-1">
                   SOL price over the same days
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold">8</div>
+                <div className="text-3xl font-bold">125</div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  days it actually traded
+                  harvests closed
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold">9</div>
+                <div className="text-3xl font-bold">11</div>
                 <div className="text-xs text-muted-foreground mt-1">
                   days it chose to sit still
                 </div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mt-6 border-t pt-5">
-              Read that again: the whole +10.5% came out of{" "}
-              <strong className="text-foreground">8 trading days</strong>. The
-              other 9, it did nothing — on purpose. When it sensed it was selling
-              against the tide, it stopped and waited, so the idle stretch
-              isn&apos;t downtime, it&apos;s the discipline that preserved the
-              capital to harvest the drop. The ruler is SOL, not the dollar: the
-              price fell, the coin count rose.
+              Three rulers, one run. In SOL the wallet grew{" "}
+              <strong className="text-foreground">+0.166 SOL</strong>. Against
+              just holding the same mix, the engine added{" "}
+              <strong className="text-foreground">+0.058 SOL</strong>; the rest
+              is idle USDC that bought more SOL as the price fell. In dollars,
+              cashing out at the end would have been{" "}
+              <strong className="text-foreground">−$8.58</strong>. The ruler is
+              SOL, not the dollar: the price fell, the coin count rose. It sat
+              still on 11 of the 31 days, and that is the discipline that kept
+              the capital to harvest the drop.
             </p>
+          </div>
+
+          {/* Live run (screenshot) */}
+          <div className="grid gap-8 md:grid-cols-[minmax(0,22rem)_1fr] items-center rounded-xl border bg-card p-6 sm:p-8">
+            <figure className="mx-auto w-full max-w-sm">
+              <Image
+                src="/hen-run-live.png"
+                alt="Miner dashboard showing a live run: mined so far in SOL, the wallet split between SOL and USDC, and the most recent harvests"
+                width={464}
+                height={600}
+                className="w-full h-auto rounded-xl border"
+              />
+              <figcaption className="mt-3 text-center font-mono text-xs text-muted-foreground">
+                Current test run
+              </figcaption>
+            </figure>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold">Another run, live right now</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                The next run is already going, with more capital than the last
+                one. This is the panel as it looks while it runs: what it mined
+                so far, split between the engine and idle USDC, what it cost to
+                run, and the harvests as they close.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                It is a test run, a few days old, so we are not drawing
+                conclusions from it. We will publish the result when it closes,
+                the same way we did this one.
+              </p>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-10 items-start">
