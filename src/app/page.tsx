@@ -57,7 +57,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
+          <div className="flex flex-col gap-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Cloud className="h-6 w-6" />
             </div>
@@ -67,13 +67,13 @@ export default function Home() {
             </p>
             <Link
               href="/services#cloud"
-              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
+              className="group mt-auto self-start inline-flex items-center text-sm text-primary font-medium hover:underline"
             >
               Learn more{" "}
               <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-          <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
+          <div className="flex flex-col gap-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Cpu className="h-6 w-6" />
             </div>
@@ -83,13 +83,13 @@ export default function Home() {
             </p>
             <Link
               href="/services#serving"
-              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
+              className="group mt-auto self-start inline-flex items-center text-sm text-primary font-medium hover:underline"
             >
               Learn more{" "}
               <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-          <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
+          <div className="flex flex-col gap-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Workflow className="h-6 w-6" />
             </div>
@@ -99,13 +99,13 @@ export default function Home() {
             </p>
             <Link
               href="/services#workflows"
-              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
+              className="group mt-auto self-start inline-flex items-center text-sm text-primary font-medium hover:underline"
             >
               Learn more{" "}
               <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-          <div className="space-y-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
+          <div className="flex flex-col gap-4 p-6 rounded-xl border bg-card/50 backdrop-blur-sm">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <BrainCircuit className="h-6 w-6" />
             </div>
@@ -115,7 +115,7 @@ export default function Home() {
             </p>
             <Link
               href="/services#training"
-              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
+              className="group mt-auto self-start inline-flex items-center text-sm text-primary font-medium hover:underline"
             >
               Learn more{" "}
               <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
