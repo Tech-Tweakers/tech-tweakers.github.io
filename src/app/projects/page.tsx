@@ -172,7 +172,7 @@ export default function ProjectsPage() {
             <div className="space-y-4">
               <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
                 <Bot className="mr-2 h-4 w-4" />
-                XCT Applied · Agent Engine · Private
+                XCT Applied · Modular Agent Engine
               </div>
               <h2 className="text-3xl font-bold">XCT-Core</h2>
               <p className="text-muted-foreground max-w-2xl leading-relaxed">
