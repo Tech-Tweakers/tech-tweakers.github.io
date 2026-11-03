@@ -74,7 +74,7 @@ const sweepers = [
 const proofPoints = [
   {
     title: "The idle days are the point",
-    body: "In one 30-day run it closed trades on 20 of 31 calendar days and sat still on the other 11, on purpose. It didn't bleed into the chop, it waited it out and harvested the drop.",
+    body: "In one 30-day run it closed trades on 20 of 31 calendar days and sat still on the other 11, on purpose. The longest pause was a full week: the price drifted with almost no movement, sitting well above where its open positions were waiting. Earlier versions kept trading into that, and every trade turned into another stuck position, which bled the wallet. This one stopped and waited, and when the price moved again it opened 25 trades in a single day. It took us nine months to learn to contain that bleed.",
   },
   {
     title: "The ruler is SOL, not the dollar",
