@@ -95,13 +95,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-xl border bg-linear-to-br from-card via-card to-muted/40 p-6">
-            <div className="font-semibold text-foreground">Andreh Torres</div>
-            <div className="text-sm text-muted-foreground">
-              Principal Engineer · Tech Tweakers Brazil
-            </div>
-          </div>
-
           <div className="pt-4">
             <Link
               href="/contact"
