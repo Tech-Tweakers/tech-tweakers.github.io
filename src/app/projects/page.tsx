@@ -114,6 +114,7 @@ export default function ProjectsPage() {
             </p>
             <Points
               items={[
+                "Talk to it and it talks back: the live demo answers in voice",
                 "Name, instructions and voice are settings, so one product serves many brands",
                 "Swap the model provider without redeploying, or run a local model",
                 "Runs on your own hardware, so the data never has to leave",
@@ -128,7 +129,7 @@ export default function ProjectsPage() {
                 className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
               >
                 <ExternalLink className="mr-2 h-4 w-4" />
-                Live Demo
+                Try the Live Demo
               </Link>
             </div>
           </div>
