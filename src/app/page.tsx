@@ -199,7 +199,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-xl border bg-card p-6 space-y-3">
+          <div className="flex flex-col gap-3 rounded-xl border bg-card p-6">
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Cpu className="h-5 w-5" />
             </div>
@@ -213,7 +213,7 @@ export default function Home() {
               Kubernetes with pods that use the GPU. It sits under our agents
               and client deployments.
             </p>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
                 Go
               </span>
@@ -225,7 +225,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-xl border bg-card p-6 space-y-3">
+          <div className="flex flex-col gap-3 rounded-xl border bg-card p-6">
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               <Bot className="h-5 w-5" />
             </div>
@@ -235,7 +235,7 @@ export default function Home() {
               sessions and the context, and serves any front end over HTTP and
               SSE. Built from the archived Go version of opencode (MIT) and heavily rewritten.
             </p>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
                 Go
               </span>
