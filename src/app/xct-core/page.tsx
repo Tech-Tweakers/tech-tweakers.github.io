@@ -169,7 +169,7 @@ export default function XCTCorePage() {
           </div>
           <div className="space-y-4">
             <h2 className="text-2xl font-bold">Where It Came From</h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               XCT-Core started from the archived Go version of opencode, by
               Kujtim Hoxha (MIT license). We took a copy and work on it
               internally, and the agent architecture, the prompts and the rules
@@ -177,7 +177,7 @@ export default function XCTCorePage() {
             </p>
             <Link
               href="/about"
-              className="group inline-flex items-center text-primary font-medium hover:underline"
+              className="group inline-flex items-center text-sm text-primary font-medium hover:underline"
             >
               More on what we build on{" "}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
