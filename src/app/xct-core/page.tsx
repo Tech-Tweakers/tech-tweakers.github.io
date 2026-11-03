@@ -129,9 +129,13 @@ export default function XCTCorePage() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Each session can use a different provider, and you can change it
-              in the middle of the work.
+              in the middle of the work. XCT-Core speaks the OpenAI-compatible
+              API, so any provider that does the same can plug in.
             </p>
           </div>
+          <p className="text-center font-mono text-xs uppercase tracking-wider text-muted-foreground">
+            Tested so far
+          </p>
           <div className="flex flex-wrap justify-center gap-3">
             {providers.map((p) => (
               <span
