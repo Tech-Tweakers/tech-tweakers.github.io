@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tech Tweakers | Private LLM infrastructure and agents",
-  description: "We run language models on your hardware and measure what they actually do. Cloud infrastructure, private LLM serving and agents.",
+  title: "Tech Tweakers | Cloud infrastructure, private LLMs and agents",
+  description: "Cloud infrastructure, language models on your own hardware, and agents you can trust. We build for our own needs and run it in production before it reaches yours.",
 };
 
 export default function RootLayout({

@@ -83,7 +83,8 @@ export default function ProjectsPage() {
             Our Active Projects
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            What we build and what we run in production.
+            What we build and what we run in production. All of it is ready to
+            run under your brand.
           </p>
         </div>
       </Section>
@@ -95,15 +96,15 @@ export default function ProjectsPage() {
             The Polaris Line
           </h2>
           <p className="text-lg text-muted-foreground">
-            Two products running today: one for assistants, and one for the
-            inference underneath.
+            Two products running today, both white label: one for assistants,
+            and one for the inference underneath.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="flex flex-col gap-5 rounded-xl border bg-card p-8 shadow-sm">
             <div className="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
               <MessageSquare className="mr-2 h-4 w-4" />
-              Product · White label
+              Product · Assistant
             </div>
             <h3 className="text-2xl font-bold">Polaris v2</h3>
             <p className="text-muted-foreground leading-relaxed">
@@ -151,6 +152,7 @@ export default function ProjectsPage() {
                 "OpenAI-compatible API in front of llama-server",
                 "Hot model swap, with rollback if the new model doesn't come up",
                 "Routing between models, and sessions",
+                "White label: it runs under your brand, on your own infrastructure",
                 "Your prompts and data stay on your hardware",
               ]}
             />
