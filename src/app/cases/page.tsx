@@ -77,8 +77,7 @@ export default function CasesPage() {
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Work we did for others, with the results and with what went wrong.
-            We say what each number is based on. All the cases below are from
-            the same client, a crypto trading platform.
+            We say what each number is based on.
           </p>
         </div>
       </Section>
