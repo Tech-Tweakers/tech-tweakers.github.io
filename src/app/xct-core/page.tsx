@@ -57,7 +57,7 @@ export default function XCTCorePage() {
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
             <Bot className="mr-2 h-4 w-4" />
-            Agent engine · Private
+            Modular agent engine
           </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             XCT-Core
