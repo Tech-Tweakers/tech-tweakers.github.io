@@ -7,7 +7,7 @@ import {
   Cpu,
   Layers,
   Plug,
-  Shuffle,
+  Puzzle,
   ShieldCheck,
   Split,
 } from "lucide-react";
@@ -26,9 +26,14 @@ const pillars = [
     text: "The model only suggests the next step. XCT-Core owns the loop, the tools, the sessions and the context. That is why a small local model can do real work: it never has to carry the whole task.",
   },
   {
+    icon: Puzzle,
+    title: "Modular by design",
+    text: "The core carries no business rules of its own. Each product or client adds its own routes and rules as a module that plugs in, and the core never needs to know it exists. Your rules stay yours, and the engine stays the same for everyone.",
+  },
+  {
     icon: Cpu,
     title: "Local first, cloud when you need it",
-    text: "By default it talks to Polaris, which runs the model on your own hardware, so your data never leaves. When a job needs more muscle, it can go straight to a cloud provider, and every token is counted so you always see what a run costs.",
+    text: "By default it talks to Polaris, which runs the model on your own hardware, so your data never leaves. When a job needs more muscle, it goes straight to a cloud provider, and every token is counted so you always see what a run costs. Each session can use a different one, and you can change it in the middle of the work without starting over.",
   },
   {
     icon: ShieldCheck,
@@ -43,12 +48,7 @@ const pillars = [
   {
     icon: Plug,
     title: "One engine, many front ends",
-    text: "The engine has no screen of its own. Chat, IDE and bot front ends are thin clients that plug into it, and what each deployment adds on top, like its own rules and connectors, stays with that deployment and never touches the core.",
-  },
-  {
-    icon: Shuffle,
-    title: "Switch models on the fly",
-    text: "Each session can use a different model, on your hardware or in the cloud, and you can change it in the middle of the work without starting over. Pick the right muscle for each job.",
+    text: "The engine has no screen of its own. Chat, IDE and bot front ends are thin clients that plug into it, so the same engine can sit behind a browser tab, a command line or a bot.",
   },
 ];
 
