@@ -47,8 +47,6 @@ const pillars = [
   },
 ];
 
-const providers = ["Polaris (your hardware)", "Groq", "Gemini", "OpenRouter", "Mistral", "NVIDIA", "Z.ai"];
-
 export default function XCTCorePage() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -128,23 +126,10 @@ export default function XCTCorePage() {
               Switch on the fly
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Each session can use a different provider, and you can change it
-              in the middle of the work. XCT-Core speaks the OpenAI-compatible
-              API, so any provider that does the same can plug in.
+              Run the model on your own hardware, or use a cloud provider.
+              Each session can use a different one, and you can change it in
+              the middle of the work.
             </p>
-          </div>
-          <p className="text-center font-mono text-xs uppercase tracking-wider text-muted-foreground">
-            Tested so far
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {providers.map((p) => (
-              <span
-                key={p}
-                className="rounded-full border bg-card px-4 py-2 text-sm font-medium"
-              >
-                {p}
-              </span>
-            ))}
           </div>
         </div>
       </Section>
