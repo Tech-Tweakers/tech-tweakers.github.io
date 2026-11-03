@@ -23,7 +23,7 @@ const services = [
     badge: "Cloud & Automation",
     title: "Infrastructure that runs itself.",
     description:
-      "We set up and maintain the infra so your team can focus on the product. On AWS, GCP, Azure or your own machines.",
+      "We set up and maintain the infra so your team can focus on the product. On AWS, GCP, Azure, DigitalOcean, Hetzner or your own machines.",
     items: [
       "Infrastructure as code with Terraform, Pulumi or CloudFormation",
       "CI/CD with GitHub Actions, GitLab CI or ArgoCD",
