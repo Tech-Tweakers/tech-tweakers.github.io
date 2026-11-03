@@ -129,7 +129,6 @@ export default function XCTCorePage() {
                 "It is private software. It is not open source, and we run it ourselves and for our clients.",
                 "It is one program with no dependencies to install, and it runs on Linux, macOS and Windows.",
                 "It has no screen of its own, by design. Whatever talks to a person is a separate client.",
-                "A long-running background service version is planned, not available yet.",
               ].map((item) => (
                 <li
                   key={item}
