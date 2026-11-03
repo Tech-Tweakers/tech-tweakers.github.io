@@ -4,10 +4,10 @@ import {
   ArrowRight,
   Bot,
   Check,
-  Cloud,
   Cpu,
   Layers,
   Plug,
+  Shuffle,
   ShieldCheck,
   Split,
 } from "lucide-react";
@@ -44,6 +44,11 @@ const pillars = [
     icon: Plug,
     title: "One engine, many front ends",
     text: "The engine has no screen of its own. Chat, IDE and bot front ends are thin clients that plug into it, and what each deployment adds on top, like its own rules and connectors, stays with that deployment and never touches the core.",
+  },
+  {
+    icon: Shuffle,
+    title: "Switch models on the fly",
+    text: "Each session can use a different model, on your hardware or in the cloud, and you can change it in the middle of the work without starting over. Pick the right muscle for each job.",
   },
 ];
 
@@ -94,7 +99,7 @@ export default function XCTCorePage() {
               How It Works
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Five ideas, each one from something that went wrong before.
+              Six ideas, each one from something that went wrong before.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
@@ -110,26 +115,6 @@ export default function XCTCorePage() {
                 <p className="text-muted-foreground leading-relaxed">{text}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Providers */}
-      <Section className="bg-linear-to-br from-primary/5 via-background to-background">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
-            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-              <Cloud className="mr-2 h-4 w-4" />
-              Your choice of model
-            </div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Switch on the fly
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Run the model on your own hardware, or use a cloud provider.
-              Each session can use a different one, and you can change it in
-              the middle of the work.
-            </p>
           </div>
         </div>
       </Section>
