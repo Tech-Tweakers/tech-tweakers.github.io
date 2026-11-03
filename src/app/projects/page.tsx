@@ -103,8 +103,8 @@ export default function ProjectsPage() {
               The fourth generation of our inference line. Today it is an
               orchestrator in Go on top of llama-server: it exposes an
               OpenAI-compatible API, swaps models in place with a rollback, and
-              runs on k3s with a GPU. It is what sits under our agents and our
-              client deployments.
+              runs on Kubernetes, with pods that use the GPU. It is what sits
+              under our agents and our client deployments.
             </p>
           </div>
           <div className="p-8 md:p-10 grid md:grid-cols-2 gap-8">
@@ -121,7 +121,7 @@ export default function ProjectsPage() {
             </div>
             <div className="space-y-4">
               <h3 className="font-semibold text-lg">Built With</h3>
-              <Tags items={["Go", "llama.cpp", "k3s", "GPU"]} />
+              <Tags items={["Go", "llama.cpp", "Kubernetes", "GPU"]} />
             </div>
           </div>
           <div className="p-8 md:p-10 border-t space-y-6">

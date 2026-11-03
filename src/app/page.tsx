@@ -209,8 +209,9 @@ export default function Home() {
               C++ binding for llama.cpp, grew into an institutional chatbot
               with RAG and voice (v2) and an XCT agent for critical automation
               (v3). Today it is an orchestrator in Go on top of llama-server:
-              OpenAI-compatible API, in-place model swaps with rollback, on k3s
-              with a GPU. It sits under our agents and client deployments.
+              OpenAI-compatible API, in-place model swaps with rollback, on
+              Kubernetes with pods that use the GPU. It sits under our agents
+              and client deployments.
             </p>
             <div className="flex flex-wrap gap-1.5">
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
@@ -220,7 +221,7 @@ export default function Home() {
                 llama.cpp
               </span>
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">
-                k3s
+                Kubernetes
               </span>
             </div>
           </div>
