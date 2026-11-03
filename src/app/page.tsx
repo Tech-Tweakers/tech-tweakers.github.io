@@ -195,7 +195,7 @@ export default function Home() {
             What We Build
           </h2>
           <p className="text-lg text-muted-foreground">
-            Tools we built for ourselves and run in production. Most are private.
+            Tools we built for ourselves and run in production.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
@@ -205,13 +205,11 @@ export default function Home() {
             </div>
             <h3 className="font-bold">Polaris v4</h3>
             <p className="text-sm text-muted-foreground">
-              Our inference line, now in its fourth generation. It began as a
-              C++ binding for llama.cpp, grew into an institutional chatbot
-              with RAG and voice (v2) and an XCT agent for critical automation
-              (v3). Today it is an orchestrator in Go on top of llama-server:
-              OpenAI-compatible API, in-place model swaps with rollback, on
-              Kubernetes with pods that use the GPU. It sits under our agents
-              and client deployments.
+              Our inference layer: an orchestrator in Go on top of llama-server,
+              with an OpenAI-compatible API and in-place model swaps with
+              rollback, on Kubernetes with pods that use the GPU. It sits under
+              our agents and client deployments. The Polaris line also includes
+              Polaris v2, our white-label assistant.
             </p>
             <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
               <span className="bg-muted px-2 py-0.5 rounded text-xs font-mono">

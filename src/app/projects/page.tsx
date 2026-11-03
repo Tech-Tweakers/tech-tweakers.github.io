@@ -7,6 +7,7 @@ import {
   Bot,
   ExternalLink,
   Github,
+  MessageSquare,
   ArrowRight,
 } from "lucide-react";
 import type { Metadata } from "next";
@@ -17,18 +18,16 @@ export const metadata: Metadata = {
     "What Tech Tweakers builds and runs: Polaris, XCT-Core, Golden Hen, and earlier work.",
 };
 
-const earlier = [
-  {
-    name: "Polaris v2",
-    text: "An institutional chatbot with retrieval and voice. The demo is still up.",
-    href: "https://techtweakers.org/polaris-v2-web/#/",
-    label: "Live Demo",
-  },
+const earlier: { name: string; text: string; href?: string; label?: string }[] = [
   {
     name: "polaris-core",
     text: "A C++ binding for llama.cpp, from before we adopted llama-server.",
     href: "https://github.com/Tech-Tweakers/polaris-core",
     label: "GitHub",
+  },
+  {
+    name: "Polaris v3",
+    text: "A deterministic agent built on XCT. XCT-Core and Polaris v4 took over its job.",
   },
   {
     name: "XCT",
@@ -84,74 +83,79 @@ export default function ProjectsPage() {
             Our Active Projects
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            What we build and what we run in production. Most of it is not open
-            source.
+            What we build and what we run in production.
           </p>
         </div>
       </Section>
 
-      {/* Polaris */}
+      {/* Polaris line */}
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-20">
-        <div className="rounded-xl border bg-card shadow-sm overflow-hidden">
-          <div className="p-8 md:p-10 border-b bg-muted/20 space-y-4">
-            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
-              <Cpu className="mr-2 h-4 w-4" />
-              Inference · Private
+        <div className="text-center space-y-4 max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            The Polaris Line
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Two products running today: one for assistants, and one for the
+            inference underneath.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="flex flex-col gap-5 rounded-xl border bg-card p-8 shadow-sm">
+            <div className="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
+              <MessageSquare className="mr-2 h-4 w-4" />
+              Product · White label
             </div>
-            <h2 className="text-3xl font-bold">Polaris v4</h2>
-            <p className="text-muted-foreground max-w-2xl leading-relaxed">
-              The fourth generation of our inference line. Today it is an
+            <h3 className="text-2xl font-bold">Polaris v2</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              A conversational assistant ready to run under your brand. Text
+              and voice, memory of the conversation, document processing and
+              access for several clients, with the model, the transcription and
+              the voice chosen by configuration and not by code.
+            </p>
+            <Points
+              items={[
+                "Name, instructions and voice are settings, so one product serves many brands",
+                "Swap the model provider without redeploying, or run a local model",
+                "Runs on your own hardware, so the data never has to leave",
+                "From a very small footprint with remote providers up to a GPU server for fully local use",
+              ]}
+            />
+            <div className="mt-auto space-y-4 pt-2">
+              <Tags items={["Python", "FastAPI", "Vue", "Kubernetes"]} />
+              <Link
+                href="https://techtweakers.org/polaris-v2-web/#/"
+                target="_blank"
+                className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+              >
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Live Demo
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-5 rounded-xl border bg-card p-8 shadow-sm">
+            <div className="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
+              <Cpu className="mr-2 h-4 w-4" />
+              Inference · In production
+            </div>
+            <h3 className="text-2xl font-bold">Polaris v4</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              The layer under our agents and our client deployments. An
               orchestrator in Go on top of llama-server: it exposes an
               OpenAI-compatible API, swaps models in place with a rollback, and
-              runs on Kubernetes, with pods that use the GPU. It is what sits
-              under our agents and our client deployments.
+              runs on Kubernetes with pods that use the GPU.
             </p>
-          </div>
-          <div className="p-8 md:p-10 grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">What It Does</h3>
-              <Points
-                items={[
-                  "OpenAI-compatible API in front of llama-server",
-                  "Hot model swap, with rollback if the new model doesn't come up",
-                  "Routing and sessions",
-                  "Your prompts and data stay on your hardware",
-                ]}
-              />
-            </div>
-            <div className="space-y-4">
-              <h3 className="font-semibold text-lg">Built With</h3>
+            <Points
+              items={[
+                "OpenAI-compatible API in front of llama-server",
+                "Hot model swap, with rollback if the new model doesn't come up",
+                "Routing between models, and sessions",
+                "Your prompts and data stay on your hardware",
+              ]}
+            />
+            <div className="mt-auto space-y-4 pt-2">
               <Tags items={["Go", "llama.cpp", "Kubernetes", "GPU"]} />
             </div>
-          </div>
-          <div className="p-8 md:p-10 border-t space-y-6">
-            <h3 className="font-semibold text-lg">How Polaris Got Here</h3>
-            <ol className="grid gap-4 md:grid-cols-4">
-              {[
-                {
-                  v: "polaris-core",
-                  t: "A C++ binding for llama.cpp with Python integration. Our first inference layer.",
-                },
-                {
-                  v: "Polaris v2",
-                  t: "An institutional chatbot with RAG, voice and multi-platform support, with guardrails.",
-                },
-                {
-                  v: "Polaris v3",
-                  t: "A deterministic agent built on XCT, for critical automation where the model proposes and the system decides.",
-                },
-                {
-                  v: "Polaris v4",
-                  t: "Today: an orchestrator in Go on top of llama-server, under our agents and client deployments.",
-                },
-              ].map((step, i) => (
-                <li key={step.v} className="rounded-lg border bg-background p-4 space-y-2">
-                  <div className="text-xs font-mono text-primary">0{i + 1}</div>
-                  <div className="font-semibold">{step.v}</div>
-                  <p className="text-sm text-muted-foreground">{step.t}</p>
-                </li>
-              ))}
-            </ol>
           </div>
         </div>
       </Section>
@@ -266,15 +270,17 @@ export default function ProjectsPage() {
             <div key={p.name} className="rounded-xl border bg-card p-6 space-y-3">
               <h3 className="font-bold">{p.name}</h3>
               <p className="text-sm text-muted-foreground">{p.text}</p>
-              <Link
-                href={p.href}
-                target="_blank"
-                className="inline-flex items-center text-xs text-primary font-medium hover:underline"
-              >
-                {p.label === "GitHub" && <Github className="mr-1 h-3 w-3" />}
-                {p.label}
-                {p.label !== "GitHub" && <ExternalLink className="ml-1 h-3 w-3" />}
-              </Link>
+              {p.href && (
+                <Link
+                  href={p.href}
+                  target="_blank"
+                  className="inline-flex items-center text-xs text-primary font-medium hover:underline"
+                >
+                  {p.label === "GitHub" && <Github className="mr-1 h-3 w-3" />}
+                  {p.label}
+                  {p.label !== "GitHub" && <ExternalLink className="ml-1 h-3 w-3" />}
+                </Link>
+              )}
             </div>
           ))}
         </div>
