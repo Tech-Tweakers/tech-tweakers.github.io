@@ -18,7 +18,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Miner — Golden Hen Suite | Tech Tweakers",
   description:
-    "Mine SOL from volatility. A non-custodial, market-neutral engine on Solana that sells into strength, rebuys into weakness, and knows when to stop. In one live 30-day run: +12.8% in SOL while the price fell 16%, with the engine itself behind about a third of that.",
+    "Mine SOL from volatility. A non-custodial, sell-only engine on Solana that sells SOL into strength, buys it back cheaper, and knows when to stop. In one live 30-day run: +12.8% in SOL while the price fell 16%, with the engine itself behind about a third of that.",
 };
 
 const mechanics = [
