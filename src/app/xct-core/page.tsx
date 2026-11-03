@@ -145,8 +145,9 @@ export default function XCTCorePage() {
             <h2 className="text-2xl font-bold">Where It Came From</h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               XCT-Core is the engine that came out of Txai, the personal
-              assistant we use ourselves. We built the assistant first, and
-              pulled the engine out of it so anything can be built on top.
+              assistant we use ourselves. Txai was born with several
+              interfaces. We then turned it into a headless, modular engine, so
+              it can be put to work with clients whenever that makes sense.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               XCT-Core started from the archived Go version of opencode, by
