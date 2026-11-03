@@ -97,8 +97,9 @@ export default function CasesPage() {
               The platform was running on a handful of servers that were mostly
               idle, and that could not safely take a sudden wave of users. The
               company was about to launch. They needed it to cost less and to
-              handle growth without anyone watching it. We prepared a scalable
-              environment for it, in about two weeks of focused work.
+              handle growth without anyone watching it. We moved it to managed
+              Kubernetes on DigitalOcean (DOKS), a setup that adds and removes
+              capacity on its own, in about two weeks of focused work.
             </p>
           </div>
 
@@ -113,7 +114,7 @@ export default function CasesPage() {
                 {
                   value: "1 → 10",
                   label: "copies of the app, on its own",
-                  note: "added under load, removed afterwards",
+                  note: "Kubernetes added them under load and removed them afterwards",
                 },
               ]}
             />
@@ -123,8 +124,8 @@ export default function CasesPage() {
                 <Points
                   items={[
                     "Measured what the old servers really used before choosing anything, and sized the new setup from that",
-                    "Moved the services one at a time, and switched the old servers off only after the new ones had proven themselves",
-                    "Set the system to add copies of itself when demand rises and remove them when it drops, so it only pays for what it uses",
+                    "Moved the services one at a time onto a managed Kubernetes cluster (DigitalOcean DOKS), and switched the old servers off only after the new ones had proven themselves",
+                    "Set Kubernetes to add copies of the app, and servers, when demand rises and remove them when it drops, so it only pays for what it uses",
                     "Left the system closed to the public by default, accepting only traffic that comes through the company’s protection layer",
                   ]}
                 />
@@ -136,7 +137,7 @@ export default function CasesPage() {
                     <strong className="text-foreground">Cost.</strong> The
                     first environment we moved ran on four servers that were
                     about 6% used, at $144 a month. After the move, the same
-                    services ran on one server at $24 a month. Counting the
+                    services ran on a single Kubernetes node at $24 a month. Counting the
                     extra piece that receives the traffic, the saving is closer
                     to 75%. These are published prices against what we measured,
                     not a closed invoice, and they cover that one environment.
@@ -146,8 +147,9 @@ export default function CasesPage() {
                   </p>
                   <p>
                     <strong className="text-foreground">Growth.</strong> We ran
-                    one 10-minute test with a flood of simulated alerts. The
-                    system added copies of itself on its own, handled about 520
+                    one 10-minute test with a flood of simulated alerts. Kubernetes
+                    added copies of the app on its own, from 1 to 10, and
+                    servers from 1 to 6, and the platform handled about 520
                     thousand alerts, and when it reached its limit it turned the
                     excess away politely instead of crashing. It is one test, so
                     it shows how the system behaves, not how much it can take in
@@ -172,10 +174,11 @@ export default function CasesPage() {
               Rebuilt in two hours, and safer than before
             </h2>
             <p className="text-muted-foreground max-w-2xl leading-relaxed">
-              Everything the platform runs on is written down as code, so it can
-              be reviewed, repeated and rebuilt. We found out how well that
-              works the hard way: one of the environments was deleted by
-              mistake, and we brought it back from the code.
+              Everything the platform runs on, the Kubernetes cluster included,
+              is written down as code, so it can be reviewed, repeated and
+              rebuilt. We found out how well that works the hard way: one of
+              the clusters was deleted by mistake, and we brought it back from
+              the code.
             </p>
           </div>
 
@@ -199,18 +202,18 @@ export default function CasesPage() {
               <Block icon={TriangleAlert} title="What went wrong">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   During a routine update, an old change was out of date while
-                  the cloud provider had also updated things on its own. The
-                  two disagreed, and the update deleted the environment instead
+                  the cloud provider had also upgraded Kubernetes on its own.
+                  The two disagreed, and the update deleted the cluster instead
                   of adjusting it. All five services were back, running, about
                   two hours later. Then we fixed the cause, so that a routine
-                  update can no longer delete the environment.
+                  update can no longer delete the cluster.
                 </p>
               </Block>
 
               <Block icon={ShieldCheck} title="What we changed afterwards">
                 <Points
                   items={[
-                    "Automatic updates from the provider are switched off. Upgrades are now a deliberate step, tried first and applied in a planned window",
+                    "Automatic Kubernetes upgrades from the provider are switched off. Upgrades are now a deliberate step, tried first and applied in a planned window",
                     "Bad settings are caught before they can reach production",
                     "Changes reach production through a path with checks. Nothing goes live on its own: it needs two people to approve and a deliberate confirmation",
                     "Monitoring lives outside the platform it watches, so it keeps working when the platform doesn’t",
