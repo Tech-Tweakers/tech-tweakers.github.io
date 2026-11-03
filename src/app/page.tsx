@@ -264,8 +264,9 @@ export default function Home() {
             Got a problem that fits?
           </h2>
           <p className="text-muted-foreground text-lg">
-            If you need to run language models on your own hardware and know
-            what they actually do, we should talk.
+            If you need infrastructure that holds up as you grow, or language
+            models running on your own hardware with agents you can trust,
+            we should talk.
           </p>
           <Link
             href="/contact"
