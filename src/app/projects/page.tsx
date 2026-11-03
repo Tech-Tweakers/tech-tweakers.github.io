@@ -18,29 +18,28 @@ export const metadata: Metadata = {
     "What Tech Tweakers builds and runs: Polaris, XCT-Core, Golden Hen, and earlier work.",
 };
 
-const earlier: { name: string; text: string; href?: string; label?: string }[] = [
+const v3Parts = [
   {
-    name: "Polaris v3",
-    text: "A deterministic agent built on XCT. It ran on polaris-core and on XCT-Qwen3-4B, both made for it. Today XCT-Core and Polaris v4 cover its role.",
+    name: "XCT",
+    text: "The protocol. The model proposes one step, the system validates it and a tool executes it. Today XCT is a methodology, and XCT-Core is where it runs.",
+    href: "https://github.com/Tech-Tweakers/xct",
+    label: "GitHub",
   },
   {
     name: "polaris-core",
-    text: "A C++ binding for llama.cpp, built for Polaris v3: the inference layer under the agent.",
+    text: "A C++ binding for llama.cpp: the inference layer under the agent.",
     href: "https://github.com/Tech-Tweakers/polaris-core",
     label: "GitHub",
   },
   {
     name: "XCT-Qwen3-4B",
-    text: "A small model fine-tuned to work inside the protocol, built for Polaris v3.",
+    text: "A small model fine-tuned to work inside the protocol.",
     href: "https://huggingface.co/tech-tweakers/XCT-Qwen3-4B",
     label: "HuggingFace",
   },
-  {
-    name: "XCT",
-    text: "The original protocol. Today XCT is a methodology, and XCT-Core is where it runs.",
-    href: "https://github.com/Tech-Tweakers/xct",
-    label: "GitHub",
-  },
+];
+
+const earlier: { name: string; text: string; href?: string; label?: string }[] = [
   {
     name: "nebula-monitor",
     text: "An ESP32 monitor for IT resources, online or local.",
@@ -267,19 +266,50 @@ export default function ProjectsPage() {
             Earlier Work
           </h2>
           <p className="text-lg text-muted-foreground">
-            Where we came from. Some of it is still up.
+            Where we came from. Polaris v3 was a whole stack of its own.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
+          <div className="rounded-xl border bg-card p-6 space-y-5 lg:col-span-2">
+            <div className="space-y-2">
+              <h3 className="text-lg font-bold">Polaris v3</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                A deterministic agent that put the XCT principle to work, and
+                the whole stack under it: the protocol, our own inference layer
+                and a model trained for it. Today XCT-Core and Polaris v4 cover
+                its role.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {v3Parts.map((part) => (
+                <div
+                  key={part.name}
+                  className="flex flex-col gap-2 rounded-lg border bg-background p-4"
+                >
+                  <div className="font-semibold">{part.name}</div>
+                  <p className="text-sm text-muted-foreground">{part.text}</p>
+                  <Link
+                    href={part.href}
+                    target="_blank"
+                    className="mt-auto inline-flex items-center pt-1 text-xs text-primary font-medium hover:underline"
+                  >
+                    {part.label === "GitHub" && <Github className="mr-1 h-3 w-3" />}
+                    {part.label}
+                    {part.label !== "GitHub" && <ExternalLink className="ml-1 h-3 w-3" />}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
           {earlier.map((p) => (
-            <div key={p.name} className="rounded-xl border bg-card p-6 space-y-3">
+            <div key={p.name} className="flex flex-col gap-3 rounded-xl border bg-card p-6">
               <h3 className="font-bold">{p.name}</h3>
               <p className="text-sm text-muted-foreground">{p.text}</p>
               {p.href && (
                 <Link
                   href={p.href}
                   target="_blank"
-                  className="inline-flex items-center text-xs text-primary font-medium hover:underline"
+                  className="mt-auto inline-flex items-center text-xs text-primary font-medium hover:underline"
                 >
                   {p.label === "GitHub" && <Github className="mr-1 h-3 w-3" />}
                   {p.label}
