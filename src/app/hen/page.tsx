@@ -331,7 +331,9 @@ export default function HenPage() {
               a real swap, every sweep a real transaction, the whole ledger
               reconcilable against the blockchain down to a gas-and-dust gap of
               cents. It runs live, with real capital, through bull, bear, and
-              lateral — not a demo that never faced the market.
+              lateral, and its best trick is knowing when to stop: when the
+              tide is against it, it sits still. Not a demo that never faced
+              the market.
             </p>
           </div>
 
