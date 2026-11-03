@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "What Tech Tweakers builds and runs: Polaris, XCT-Core, Golden Hen, and earlier work.",
 };
 
-const v3Parts = [
+const v3Parts: { name: string; text: string; href?: string; label?: string }[] = [
   {
     name: "XCT",
     text: "The protocol. The model proposes one step, the system validates it and a tool executes it. Today XCT is a methodology, and XCT-Core is where it runs.",
@@ -36,6 +36,10 @@ const v3Parts = [
     text: "A small model fine-tuned to work inside the protocol.",
     href: "https://huggingface.co/tech-tweakers/XCT-Qwen3-4B",
     label: "HuggingFace",
+  },
+  {
+    name: "Polaris XCut",
+    text: "An AI code editor built to drive the agent. It stopped halfway when we moved to the engine-first design behind XCT-Core and Polaris v4.",
   },
 ];
 
@@ -275,12 +279,12 @@ export default function ProjectsPage() {
               <h3 className="text-lg font-bold">Polaris v3</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 A deterministic agent that put the XCT principle to work, and
-                the whole stack under it: the protocol, our own inference layer
-                and a model trained for it. Today XCT-Core and Polaris v4 cover
-                its role.
+                the whole stack under it: the protocol, our own inference layer,
+                a model trained for it and an editor to drive it. Today
+                XCT-Core and Polaris v4 cover its role.
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2">
               {v3Parts.map((part) => (
                 <div
                   key={part.name}
@@ -288,15 +292,17 @@ export default function ProjectsPage() {
                 >
                   <div className="font-semibold">{part.name}</div>
                   <p className="text-sm text-muted-foreground">{part.text}</p>
-                  <Link
-                    href={part.href}
-                    target="_blank"
-                    className="mt-auto inline-flex items-center pt-1 text-xs text-primary font-medium hover:underline"
-                  >
-                    {part.label === "GitHub" && <Github className="mr-1 h-3 w-3" />}
-                    {part.label}
-                    {part.label !== "GitHub" && <ExternalLink className="ml-1 h-3 w-3" />}
-                  </Link>
+                  {part.href && (
+                    <Link
+                      href={part.href}
+                      target="_blank"
+                      className="mt-auto inline-flex items-center pt-1 text-xs text-primary font-medium hover:underline"
+                    >
+                      {part.label === "GitHub" && <Github className="mr-1 h-3 w-3" />}
+                      {part.label}
+                      {part.label !== "GitHub" && <ExternalLink className="ml-1 h-3 w-3" />}
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>
