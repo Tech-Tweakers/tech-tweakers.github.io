@@ -105,7 +105,7 @@ export default function ProjectsPage() {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
                 <MessageSquare className="mr-2 h-4 w-4" />
-                Product · Assistant
+                Product · Corporate Chatbot
               </div>
               <Link
                 href="https://techtweakers.org/polaris-v2-web/#/"
@@ -140,7 +140,7 @@ export default function ProjectsPage() {
           <div className="flex flex-col gap-5 rounded-xl border bg-card p-8 shadow-sm">
             <div className="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
               <Cpu className="mr-2 h-4 w-4" />
-              Inference · In production
+              Inference · Orchestrator
             </div>
             <h3 className="text-2xl font-bold">Polaris v4</h3>
             <p className="text-muted-foreground leading-relaxed">
