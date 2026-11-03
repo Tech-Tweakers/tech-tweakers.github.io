@@ -137,7 +137,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             XCT started as a protocol. Today it is the methodology behind
             everything we build with language models, and{" "}
-            <span className="font-medium text-foreground">XCT-Core</span>, our
+            <Link href="/xct-core" className="font-medium text-foreground underline underline-offset-4 hover:text-primary">XCT-Core</Link>, our
             agent engine, is where it lives in code. The model proposes; the
             engine decides what runs.
           </p>
