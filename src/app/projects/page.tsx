@@ -102,9 +102,19 @@ export default function ProjectsPage() {
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="flex flex-col gap-5 rounded-xl border bg-card p-8 shadow-sm">
-            <div className="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
-              <MessageSquare className="mr-2 h-4 w-4" />
-              Product · Assistant
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
+                <MessageSquare className="mr-2 h-4 w-4" />
+                Product · Assistant
+              </div>
+              <Link
+                href="https://techtweakers.org/polaris-v2-web/#/"
+                target="_blank"
+                className="inline-flex items-center rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
+              >
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Try the Live Demo
+              </Link>
             </div>
             <h3 className="text-2xl font-bold">Polaris v2</h3>
             <p className="text-muted-foreground leading-relaxed">
@@ -124,14 +134,6 @@ export default function ProjectsPage() {
             />
             <div className="mt-auto space-y-4 pt-2">
               <Tags items={["Python", "FastAPI", "Vue", "Kubernetes"]} />
-              <Link
-                href="https://techtweakers.org/polaris-v2-web/#/"
-                target="_blank"
-                className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90"
-              >
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Try the Live Demo
-              </Link>
             </div>
           </div>
 
