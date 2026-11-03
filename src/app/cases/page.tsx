@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   Check,
+  Activity,
   Coins,
   Gauge,
   LifeBuoy,
@@ -76,8 +77,8 @@ export default function CasesPage() {
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Work we did for others, with the results and with what went wrong.
-            We say what each number is based on. Both cases below are from the
-            same client, a crypto trading platform, in the same two weeks.
+            We say what each number is based on. All the cases below are from
+            the same client, a crypto trading platform.
           </p>
         </div>
       </Section>
@@ -230,7 +231,74 @@ export default function CasesPage() {
         </div>
       </Section>
 
-      <Section className="border-t bg-linear-to-br from-primary/10 via-muted/40 to-muted/20">
+      {/* Case 3 — observability */}
+      <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 py-20">
+        <div className="rounded-xl border bg-card shadow-sm overflow-hidden">
+          <div className="p-8 md:p-10 border-b bg-muted/20 space-y-4">
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
+              <Activity className="mr-2 h-4 w-4" />
+              Observability · 2026
+            </div>
+            <h2 className="text-3xl font-bold">
+              Seeing problems before the users do
+            </h2>
+            <p className="text-muted-foreground max-w-2xl leading-relaxed">
+              A platform that handles trades can’t find out it is broken from a
+              customer. We built the monitoring on its own dedicated server,
+              outside the cluster it watches, so it keeps working even when the
+              cluster doesn’t. The cluster only sends its numbers out.
+            </p>
+          </div>
+
+          <div className="p-8 md:p-10 space-y-10">
+            <Stats
+              items={[
+                {
+                  value: "5",
+                  label: "dashboards, one per question",
+                  note: "written as code, not clicked together",
+                },
+                {
+                  value: "30 d",
+                  label: "of metrics kept",
+                  note: "and 7 days of logs",
+                },
+              ]}
+            />
+
+            <div className="grid md:grid-cols-2 gap-10">
+              <Block icon={ShieldCheck} title="What we did">
+                <Points
+                  items={[
+                    "Metrics and logs go from the cluster to a separate server that stores them, shows them and raises the alarms",
+                    "One dashboard anyone can read (is something broken?), one for developers per service, one for traffic, one for container pressure, and one for load tests",
+                    "Alerts for the servers, for the state of the cluster (restarts, out-of-memory kills, pods stuck waiting) and for pressure on each container",
+                    "In production, critical alerts page the team on Telegram. Elsewhere they stay quiet on purpose, so nobody learns to ignore them",
+                    "The dashboards sit behind a login, and everything is deployed by pipeline like the rest",
+                  ]}
+                />
+              </Block>
+
+              <Block icon={Gauge} title="What it can’t do yet">
+                <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  <p>
+                    It can tell you that a service was slow or failing, but not
+                    which part of the code caused it. That needs measuring from
+                    inside the applications, and it is the next step.
+                  </p>
+                  <p>
+                    Only critical alerts page the team today. Warnings are
+                    visible on the dashboards, and tuning which of them should
+                    wake someone up is a separate pass we haven’t done yet.
+                  </p>
+                </div>
+              </Block>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="border-t bg-linear-to-br from-primary/5 via-background to-background">
         <div className="flex flex-col items-center text-center space-y-6 max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Need your systems to hold up as you grow?
