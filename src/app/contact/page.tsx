@@ -25,7 +25,7 @@ export default function ContactPage() {
 
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 ">
         <div className="max-w-xl mx-auto rounded-xl border bg-card p-8 shadow-sm">
-          <form action="https://formsubmit.co/andreh.torres@hotmail.com" method="POST" className="space-y-6">
+          <form action="https://formsubmit.co/contact@techtweakers.org" method="POST" className="space-y-6">
             <input type="hidden" name="_subject" value="Nova mensagem do site Tech Tweakers" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://techtweakers.org/contact/" />
