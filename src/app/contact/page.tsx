@@ -1,5 +1,5 @@
 import { Section } from "@/components/layout/Section";
-import { Github } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   description:
     "Get in touch about cloud infrastructure, private LLM serving and agents.",
 };
-
-const field =
-  "flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
 
 export default function ContactPage() {
   return (
@@ -25,26 +22,23 @@ export default function ContactPage() {
 
       <Section className="bg-linear-to-br from-primary/10 via-muted/40 to-muted/20 ">
         <div className="max-w-xl mx-auto rounded-xl border bg-card p-8 shadow-sm">
-          <form action="https://formsubmit.co/contact@techtweakers.org" method="POST" className="space-y-6">
-            <input type="hidden" name="_subject" value="Nova mensagem do site Tech Tweakers" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://techtweakers.org/contact/" />
-            <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium leading-none">Name</label>
-              <input type="text" id="name" name="name" className={`${field} h-10`} placeholder="Your name" />
+          <div className="flex flex-col items-center gap-6 text-center">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <Mail className="h-6 w-6" />
             </div>
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium leading-none">Email</label>
-              <input type="email" id="email" name="email" className={`${field} h-10`} placeholder="name@example.com" />
+              <h2 className="text-xl font-bold">Write to us</h2>
+              <p className="text-sm text-muted-foreground">
+                The fastest way to reach us is a short email.
+              </p>
             </div>
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium leading-none">Message</label>
-              <textarea id="message" name="message" className={`${field} min-h-[120px]`} placeholder="Tell us about your project or technical challenge..." />
-            </div>
-            <button type="submit" className="inline-flex h-10 w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-              Send Message
-            </button>
-          </form>
+            <a
+              href="mailto:contact@techtweakers.org"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              contact@techtweakers.org
+            </a>
+          </div>
 
           <div className="mt-8 pt-8 border-t flex flex-col items-center gap-4 text-center">
             <div className="flex items-center text-muted-foreground">
