@@ -8,11 +8,12 @@ Five hands closing a star. This is the mark we keep.
 
 - `original-195px.png`: the only original we have (195 px). Everything else is derived from it.
 - `tweakers-star-on-dark.svg`: vectorised with vtracer from an 8x upscale of the original, on the site background (`#140d0d`).
-- `tweakers-star-transparent.svg`: the same without the background rectangle.
+- `tweakers-star-transparent-{512,1024,2048}.png`: **transparent background, gradients kept, clean edges on any background.** This is the one to use when you need the mark without a box.
+- `tweakers-star-transparent.svg`: transparent vector, traced from a hard-edged version so it has no dark halo. Gradients are flat colours.
 - `tweakers-star-on-dark-{512,1024,2048}.png`: raster exports (1024 is a good LinkedIn avatar).
 - `og-tweakers-1200x630.png`: link-preview image.
 
-Known limits of the vector: gradients became flat colours, edges are slightly uneven when zoomed in, and the file is heavy (about 650 KB, 250 KB gzipped), so do not use the SVG in the site header, where `public/logo.png` is enough. The "transparent" SVG still has a thin dark outline on light backgrounds.
+Known limits of the vectors: gradients became flat colours, edges are slightly uneven when zoomed in, and the file is heavy (about 650 KB, 250 KB gzipped), so do not use the SVG in the site header, where `public/logo.png` is enough.
 
 ## `xct-hourglass/` — mark for XCT-Core / TxAI
 
