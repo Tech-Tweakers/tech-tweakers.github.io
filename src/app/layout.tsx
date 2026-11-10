@@ -14,9 +14,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Tech Tweakers | Cloud infrastructure, private LLMs and agents";
+const description =
+  "Cloud infrastructure, language models on your own hardware, and agents you can trust. We build for our own needs and run it in production before it reaches yours.";
+
 export const metadata: Metadata = {
-  title: "Tech Tweakers | Cloud infrastructure, private LLMs and agents",
-  description: "Cloud infrastructure, language models on your own hardware, and agents you can trust. We build for our own needs and run it in production before it reaches yours.",
+  metadataBase: new URL("https://techtweakers.org"),
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    siteName: "Tech Tweakers",
+    title,
+    description,
+    url: "/",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Tech Tweakers" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
